@@ -6,7 +6,7 @@
 
   		"liveSassCompile.settings.includeItems": [
 			// Main SASS file is location
-			"src/scss/custom-nyc-core-framework.scss"
+			"src/scss/carl-avidano-theme.scss"
   		],
 
   		"liveSassCompile.settings.formats": [

@@ -75,29 +75,44 @@ body {
 
     display: grid;
 
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 240px 1fr;
+    // Mobile
+
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas: 
-        "head main"
-        "nav main"
-        "foot main";
+        "head"
+        "nav"
+        "main"
+        "foot";
 
-    > header {
-        grid-area: head;
-    }
+        > header {
+            grid-area: head;
+        }
+            
+        > nav {
+            grid-area: nav;
+        }
+
+        > main {
+            grid-area: main;
+            overflow: scroll;
+        }
         
-    > nav {
-        grid-area: nav;
+        > footer {
+            grid-area: foot;
+        }
+    // Desktop
+
+    @include breakpoint-up(lg){
+
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 240px 1fr;
+        grid-template-areas: 
+            "head main"
+            "nav main"
+            "foot main";
+
     }
 
-    > main {
-        grid-area: main;
-        overflow: scroll;
-    }
-    
-    > footer {
-        grid-area: foot;
-    }
 }
 
 #theme-buttons{

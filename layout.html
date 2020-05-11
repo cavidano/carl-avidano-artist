@@ -36,7 +36,7 @@
 
     <header>
 
-        <div class="container text-align-center my-3">
+        <div class="container text-align-center my-2">
 
             <a href="#1" data-logo="brand">
 
@@ -55,41 +55,51 @@
 
     </header>
 
-    <nav>
+    <nav class="text-align-center">
+
+        <button class="btn btn--icon-only d-none--lg" data-toggle="collapse" data-target="#target-id" title="Menu">
+            <span class="sr-only">Menu</span>
+            <span class="fas fa-bars" aria-hidden="true"></span>
+        </button>
 
         <div class="my-2">
+            
+            <div class="rounded collapse d-block--lg" id="target-id">
 
-            <ul class="nav text-align-center" role="navigation">
-                <li>
-                    <a href="#1">Sketchbook</a>
-                </li>
-                <li>
-                    <a href="#1">Paintings</a>
-                </li>
-                <li>
-                    <a href="#1">About</a>
-                </li>
-                <li>
-                    <a href="#1">Articles</a>
-                </li>
-                <li>
-                    <a href="#1">Store</a>
-                </li>
+                <ul class="nav" role="navigation">
+                    <li>
+                        <a href="#1">Sketchbook</a>
+                    </li>
+                    <li>
+                        <a href="#1">Paintings</a>
+                    </li>
+                    <li>
+                        <a href="#1">About</a>
+                    </li>
+                    <li>
+                        <a href="#1">Articles</a>
+                    </li>
+                    <li>
+                        <a href="#1">Store</a>
+                    </li>
 
-                <li class="fs-md">
-                    <a class="btn btn--icon-only" href="#1" title="Taxi">
-                        <span class="sr-only">Taxi</span>
-                        <span class="fab fa-twitter" aria-hidden="true"></span>
-                    </a>
-                </li>
-            </ul>
+                    <li class="fs-md">
+                        <a class="btn btn--icon-only" href="#1" title="Twitter">
+                            <span class="sr-only">Twitter</span>
+                            <span class="fab fa-twitter" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- .collapse -->
 
         </div>
 
     </nav>
     <!-- #sidebar -->
 
-    <main class="border-l" id="primary-content">
+    <main class="border-l--lg bc-primary" id="primary-content">
         
                     
     </main>
@@ -120,8 +130,11 @@
                 </button>
             </li>
         </ul>
-        <div class="container text-align-center border-t py-1 fs-sm">
-            <p>&#169; 2020 Carl Avidano.</p>
+        <div class="container text-align-center border-t py-1 sans-serif fs-sm">
+            <p>
+                &#169; 2020 Carl Avidano.<br>
+                All Rights Reserved.
+            </p>
         </div>
     </footer>
 
