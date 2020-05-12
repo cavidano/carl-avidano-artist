@@ -26,7 +26,7 @@ In this file:
     --light: #fdebdb;
 
     --primary-text: white;
-    --secondary-text: var(--dark);
+    --secondary-text: #40362d;
 
     --secondary-border: hsla(0, 0%, 0%, 0.125);
 
@@ -59,11 +59,20 @@ a[data-logo="brand"] {
     }
 }
 
+// Assign Sans-serif Font
+
+.btn:not([class*="btn--icon-only"]),
 .sans-serif{
     font-family: "neue-haas-unica", sans-serif;
 }
 
-#theme-buttons{
+.btn.btn--outline{
+    border-radius: 0.5rem;;
+    font-size: var(--font-size-rg);
+    line-height: 1.25;
+}
+
+#theme-buttons {
     --theme-btn-size: 20px;
 
     > li > button {
@@ -103,11 +112,13 @@ a[data-logo="brand"] {
 
 html, 
 body {
-  height: 100vh;
+    @include breakpoint-up(lg) {
+        min-height: 800px;
+        height: 100vh;
+    }
 }
 
 #page {
-
     display: grid;
 
     // Mobile
@@ -151,34 +162,51 @@ body {
 
 // Example Grid
 
-
-.wrapper {
+#home-features {
     display: grid;
     grid-gap: var(--s2);
-    grid-template-rows: 2fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 
-.box {
-    border-radius: 0.5rem;
-    overflow: hidden;
-}
+    > * {
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
 
-.a {
-    grid-column: 1 / span 2;
-}
+    .backdrop--fixed {
+        --backdrop--fixed-height: 100%;
+        height: 100%;
+    }
+    
+    // Mobile
 
-.b {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-}
+    grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four";
 
-.c {
-    grid-column: 1;
-    grid-row: 2;
-}
+    > .one {
+        grid-area: one;
+    }
 
-.d {
-    grid-column: 2;
-    grid-row: 2;
+    > .two {
+        grid-area: two;
+    }
+
+    > .three {
+        grid-area: three;
+    }
+
+    > .four {
+        grid-area: four;
+    }
+
+    // Desktop
+
+    @include breakpoint-up(lg) {
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "one  one four"
+            "two three four";
+    }
 }
