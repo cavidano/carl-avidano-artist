@@ -12,14 +12,14 @@ for (const themeButton of themeButtonList) {
 
         switch (themeColor) {
             case 'default':
-                themeButtonTarget.classList.remove("bc-secondary", "bc-dark");
+                themeButtonTarget.classList.remove("bc-light", "bc-dark");
                 break;
-            case 'tan':
+            case 'light':
                 themeButtonTarget.classList.remove("bc-dark");
-                themeButtonTarget.classList.add("bc-secondary")
+                themeButtonTarget.classList.add("bc-light")
                 break;
             case 'dark':
-                themeButtonTarget.classList.remove("bc-secondary");
+                themeButtonTarget.classList.remove("bc-light");
                 themeButtonTarget.classList.add("bc-dark")
                 break;
         }

@@ -19,21 +19,22 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-
     --primary: #e32831;
-    --secondary: #fff1e5;
-    --dark: #141414;
-    --light: #fdebdb;
+    --secondary: #000000;
+    --dark: #1C1C1C;
+    --light: #fff1e5;
 
     --primary-text: white;
-    --secondary-text: #40362d;
+    --secondary-text: white;
+
+    --light-text: #40362d;
 
     --secondary-border: hsla(0, 0%, 0%, 0.125);
 
-    --attention: var(--primary);
+    --a11y-link-color: var(--primary);
 
     --base-font-size: 24px;
-    --base-line-height: 1.4;
+    --base-line-height: 1.3;
     --base-font-family: "adobe-garamond-pro";
 
     --font-size-sm: calc(var(--base-font-size) * 0.6); // 14px
@@ -61,15 +62,19 @@ a[data-logo="brand"] {
 
 // Assign Sans-serif Font
 
+h2, .h2, 
+h3, .h3, 
+h4, .h4,
+h5, .h5,  
+
 .btn:not([class*="btn--icon-only"]),
 .sans-serif{
     font-family: "neue-haas-unica", sans-serif;
 }
 
 .btn.btn--outline{
-    border-radius: 0.5rem;;
     font-size: var(--font-size-rg);
-    line-height: 1.25;
+    line-height: 1.2;
 }
 
 #theme-buttons {
@@ -113,12 +118,15 @@ a[data-logo="brand"] {
 html, 
 body {
     @include breakpoint-up(lg) {
+        --backdrop-fixed-height: 100%;
+
         min-height: 800px;
         height: 100vh;
     }
 }
 
 #page {
+    --sidebar-width: 200px;
     display: grid;
 
     // Mobile
@@ -151,7 +159,7 @@ body {
 
     @include breakpoint-up(lg){
         grid-template-rows: auto 1fr auto;
-        grid-template-columns: 220px 1fr;
+        grid-template-columns: var(--sidebar-width) 1fr;
         grid-template-areas: 
             "head main"
             "nav main"
@@ -167,7 +175,6 @@ body {
     grid-gap: var(--s2);
 
     > * {
-        border-radius: 0.5rem;
         overflow: hidden;
     }
 
