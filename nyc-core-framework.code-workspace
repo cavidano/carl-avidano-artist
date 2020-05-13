@@ -2,8 +2,6 @@
 
   	"settings": {
 
-  		// "liveServer.settings.port": 5502, 
-
   		"liveSassCompile.settings.includeItems": [
 			// Main SASS file is location
 			"src/scss/carl-avidano-theme.scss"
