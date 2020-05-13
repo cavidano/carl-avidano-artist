@@ -126,6 +126,12 @@ h5, .h5,
     }
 }
 
+#article-introduction {
+    @include breakpoint-up(lg) {
+        height: 100vh;
+    }
+}
+
 //////////////////////////////////////////////
 // D. Grid Layouts
 //////////////////////////////////////////////
