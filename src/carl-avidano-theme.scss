@@ -190,7 +190,7 @@ body {
 
 }
 
-// Example Grid
+// Home Features
 
 #home-features {
     display: grid;
@@ -238,4 +238,14 @@ body {
             "one  one four"
             "two three four";
     }
+}
+
+// Work Thumbnails
+
+#work-grid{
+    display: grid;
+    gap: var(--s2);
+
+    grid-template-columns: repeat(3, 1fr);
+
 }

@@ -80,11 +80,11 @@
             <span class="fas fa-bars" aria-hidden="true"></span>
         </button>
 
-        <div class="collapse d-block--lg my-2" id="target-id">
+        <div class="rounded collapse d-block--lg my-2" id="target-id">
 
             <ul class="nav" role="navigation">
                 <li>
-                    <a href="work.html">Work</a>
+                    <a href="work.html" aria-current="page">Work</a>
                 </li>
                 <li>
                     <a href="about.html">About</a>
@@ -113,111 +113,114 @@
     </nav>
     <!-- #sidebar -->
 
-    <main class="border-l--lg" id="primary-content">
+    <main class="overflow-hidden" id="primary-content">
 
-        <div class="p-2 h-100">
+        <div class="border-l--lg h-100 overflow-hidden">
 
-            <div class="h-100" id="home-features">
-
-                <div class="one">
-                    
-                    <div class="backdrop backdrop--fixed">
-
-                        <img class="backdrop__image opacity-70" src="./images/backdrop-example-01.jpg" alt="Placeholder">
-
-                        <div class="backdrop__cover">
-
-                            <div class="container medium my-4 text-align-center">
-                                
-                                <a class="banner-headline" href="#1">Latest Sketches</a>
-
-                            </div>
-                            <!-- .container -->
-
-                        </div>
-                        <!-- .backdrop__cover -->
-
-                    </div>
-                    <!-- .backdrop -->
-
+            <div class="container medium my-5" id="work-grid">
+                <div class="cell">
+                    <img src="https://via.placeholder.com/400x400.webp?text=Thumbnail" alt="Placeholder">
                 </div>
-
-                <div class="two">
-
-                    <div class="backdrop backdrop--fixed">
-
-                        <img class="backdrop__image opacity-80" src="./images/backdrop-example-02.jpg" alt="Placeholder">
-
-                        <div class="backdrop__cover">
-
-                            <div class="container medium text-align-center">
-
-                                <h2 class="h5 sans-serif">
-                                    Oil Paintings
-                                </h2>
-
-                            </div>
-                            <!-- .container -->
-
-                        </div>
-                        <!-- .backdrop__cover -->
-
-                    </div>
-                    <!-- .backdrop -->
-
+                <div class="cell">
+                    <img src="https://via.placeholder.com/400x400.webp?text=Thumbnail" alt="Placeholder">
                 </div>
-
-                <div class="three">
-
-                    <div class="backdrop backdrop--fixed">
-
-                        <img class="backdrop__image opacity-80" src="./images/backdrop-example-03.jpg" alt="Placeholder">
-
-                        <div class="backdrop__cover">
-
-                            <div class="container medium text-align-center">
-
-                                <h2 class="h5 sans-serif">
-                                    About
-                                </h2>
-
-                            </div>
-                            <!-- .container -->
-
-                        </div>
-                        <!-- .backdrop__cover -->
-
-                    </div>
-                    <!-- .backdrop -->
-                    
+                <div class="cell">
+                    <img src="https://via.placeholder.com/400x400.webp?text=Thumbnail" alt="Placeholder">
                 </div>
-
-                <div class="four">
-                    <div class="card bc-primary">
-
-                        <div class="card__header sans-serif border-b">
-                           Learn to Draw 
-                        </div>
-
-                        <div class="card__body">
-                            <h2 class="h3 sans-serif">A practical approach drawing the head for beginning artists</h2>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex
-                                facilis labore reiciendis.
-                            </p>
-                        </div>
-
-                        <div class="card__footer">
-                            <a class="btn btn--outline d-block" href="#1">Read Article</a>
-                        </div>
-
-                    </div>
-                    <!-- .card -->
+                <div class="cell">
+                    <img src="https://via.placeholder.com/400x400.webp?text=Thumbnail" alt="Placeholder">
                 </div>
+                <div class="cell">
+                    <img src="https://via.placeholder.com/400x400.webp?text=Thumbnail" alt="Placeholder">
+                </div>
+                <div class="cell">
+                    <img src="https://via.placeholder.com/400x400.webp?text=Thumbnail" alt="Placeholder">
+                </div>
+                <div class="cell">
+                    <img src="https://via.placeholder.com/400x400.webp?text=Thumbnail" alt="Placeholder">
+                </div>
+                <div class="cell">
+                    <img src="https://via.placeholder.com/400x400.webp?text=Thumbnail" alt="Placeholder">
+                </div>
+                
+            </div>
+
+
+            <div data-tab-group class="d-none">
+
+            <ul class="nav nav--horizontal--md nav--divider" role="tablist">
+                <li>
+                    <button aria-selected="true" aria-controls="tab-panel-group-a-01" id="tab-button-group-a-01" role="tab">
+                        Tab
+                    </button>
+                </li>
+                <li>
+                    <button aria-selected="false" aria-controls="tab-panel-group-a-02" id="tab-button-group-a-02" role="tab">
+                        Tab
+                    </button>
+                </li>
+                <li>
+                    <button aria-selected="false" aria-controls="tab-panel-group-a-03" id="tab-button-group-a-03" role="tab">
+                        Tab
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab__panel shown" id="tab-panel-group-a-01" aria-labelledby="tab-button-group-a-01"
+                role="tabpanel">
+                <div class="container py-4">
+                    <h2 class="h4">Tab 01</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                        ducimus quam provident repellendus eos libero error adipisci laudantium
+                        exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                        quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                        velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                        reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                    </p>
+                </div>
+                <!-- .container -->
+            </div>
+
+            <div class="tab__panel" id="tab-panel-group-a-02" aria-labelledby="tab-button-group-a-02" role="tabpanel">
+                <div class="container py-4">
+                    <h2 class="h4">Tab 02</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                        ducimus quam provident repellendus eos libero error adipisci laudantium
+                        exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                        quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                        velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                        reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                    </p>
+                </div>
+                <!-- .container -->
+            </div>
+
+            <div class="tab__panel" id="tab-panel-group-a-03" aria-labelledby="tab-button-group-a-02"
+                role="tabpanel">
+                <div class="container py-4">
+                    <h2 class="h4">Tab 03</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                        ducimus quam provident repellendus eos libero error adipisci laudantium
+                        exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                        quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                        velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                        reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                    </p>
+                </div>
+                <!-- .container -->
+            </div>
 
             </div>
-                    
+            <!-- tabs -->
+
+
         </div>
+
+       
+        
 
     </main>
     <!-- #primary-content -->
