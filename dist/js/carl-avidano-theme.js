@@ -1,3 +1,4 @@
+window.addEventListener('load', () => {
 
 //////////////////////////////////////////////
 // A. Theme Color Buttons
@@ -64,3 +65,5 @@ if (scrollTarget){
         doSomething(scrollPosition);
     });
 }
+
+});
