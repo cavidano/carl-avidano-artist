@@ -1,11 +1,31 @@
+
+const themeButtonTarget = document.getElementById('page');
+const themeButtonList = document.querySelectorAll('[data-theme]');
+
+let themeBG = localStorage.getItem('themeColor');
+
+if (!themeBG || themeBG === "default") {
+    themeButtonTarget.classList.remove('bc-light', 'bc-dark');
+    themeButtonTarget.classList.add('bc-white');
+    document.querySelector('[data-theme="default"]').classList.add("active");
+    localStorage.setItem('theme', 'default');
+} else if (themeBG === "light") {
+    themeButtonTarget.classList.remove('bc-white', 'bc-dark');
+    themeButtonTarget.classList.add('bc-light');
+    document.querySelector('[data-theme="light"]').classList.add("active");
+    localStorage.setItem('bg', 'dark');
+} else if (themeBG === "dark") {
+     themeButtonTarget.classList.remove('bc-white');
+     themeButtonTarget.classList.add('bc-dark');
+     document.querySelector('[data-theme="dark"]').classList.add("active");
+     localStorage.setItem('bg', 'dark');
+ }
+
 window.addEventListener('load', () => {
 
 //////////////////////////////////////////////
 // A. Theme Color Buttons
 //////////////////////////////////////////////
-
-const themeButtonTarget = document.getElementById('page');
-const themeButtonList = document.querySelectorAll('[data-theme]');
 
 for (const themeButton of themeButtonList) {
 
@@ -13,21 +33,26 @@ for (const themeButton of themeButtonList) {
 
         event.preventDefault();
 
-        let themeColor = themeButton.getAttribute("data-theme");
+        let setThemeColor = themeButton.getAttribute("data-theme");
 
-        switch (themeColor) {
+        switch (setThemeColor) {
             case 'default':
                 themeButtonTarget.classList.remove("bc-light", "bc-dark");
+                localStorage.setItem('themeColor', 'default');
                 break;
+
             case 'light':
                 themeButtonTarget.classList.remove("bc-dark");
-                themeButtonTarget.classList.add("bc-light")
+                themeButtonTarget.classList.add("bc-light");
+                localStorage.setItem('themeColor', 'light');
                 break;
+
             case 'dark':
                 themeButtonTarget.classList.remove("bc-light");
-                themeButtonTarget.classList.add("bc-dark")
+                themeButtonTarget.classList.add("bc-dark");
+                localStorage.setItem('themeColor', 'dark');
                 break;
-        }
+        } 
 
         for (const otherThemeButtons of themeButtonList) {
             otherThemeButtons.classList.remove("active");

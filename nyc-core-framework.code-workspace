@@ -19,7 +19,8 @@
   			"last 1 version",
   			"> 1%",
   			"IE 10"
-  		],
+		],
+		"liveServer.settings.port": 5501,
   	},
 
   	"folders": [
