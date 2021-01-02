@@ -5,20 +5,20 @@ const themeButtonList = document.querySelectorAll('[data-theme]');
 let themeBG = localStorage.getItem('themeColor');
 
 if (!themeBG || themeBG === "default") {
-    themeButtonTarget.classList.remove('bc-light', 'bc-dark');
-    themeButtonTarget.classList.add('bc-white');
+    themeButtonTarget.classList.remove('theme-light', 'theme-dark');
+    themeButtonTarget.classList.add('theme-white');
     document.querySelector('[data-theme="default"]').classList.add("active");
-    localStorage.setItem('theme', 'default');
+    localStorage.setItem('themeColor', 'default');
 } else if (themeBG === "light") {
-    themeButtonTarget.classList.remove('bc-white', 'bc-dark');
-    themeButtonTarget.classList.add('bc-light');
+    themeButtonTarget.classList.remove('theme-white', 'theme-dark');
+    themeButtonTarget.classList.add('theme-light');
     document.querySelector('[data-theme="light"]').classList.add("active");
-    localStorage.setItem('bg', 'dark');
+    localStorage.setItem('themeColor', 'dark');
 } else if (themeBG === "dark") {
-     themeButtonTarget.classList.remove('bc-white');
-     themeButtonTarget.classList.add('bc-dark');
+     themeButtonTarget.classList.remove('theme-white');
+     themeButtonTarget.classList.add('theme-dark');
      document.querySelector('[data-theme="dark"]').classList.add("active");
-     localStorage.setItem('bg', 'dark');
+     localStorage.setItem('themeColor', 'dark');
  }
 
 window.addEventListener('load', () => {
@@ -37,19 +37,19 @@ for (const themeButton of themeButtonList) {
 
         switch (setThemeColor) {
             case 'default':
-                themeButtonTarget.classList.remove("bc-light", "bc-dark");
+                themeButtonTarget.classList.remove("theme-light", "theme-dark");
                 localStorage.setItem('themeColor', 'default');
                 break;
 
             case 'light':
-                themeButtonTarget.classList.remove("bc-dark");
-                themeButtonTarget.classList.add("bc-light");
+                themeButtonTarget.classList.remove("theme-dark");
+                themeButtonTarget.classList.add("theme-light");
                 localStorage.setItem('themeColor', 'light');
                 break;
 
             case 'dark':
-                themeButtonTarget.classList.remove("bc-light");
-                themeButtonTarget.classList.add("bc-dark");
+                themeButtonTarget.classList.remove("theme-light");
+                themeButtonTarget.classList.add("theme-dark");
                 localStorage.setItem('themeColor', 'dark');
                 break;
         } 
