@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Carl Avidano'
+primary: true
+siteGroup: c5227277-32e2-4a9a-9dba-b51dc448b08e
+sortOrder: 1
