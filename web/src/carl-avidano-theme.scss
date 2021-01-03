@@ -1,0 +1,239 @@
+/*
+
+In this file:
+
+// A. Imports
+// B. Custom Properties
+// C. Global Theme Styles
+
+*/
+
+//////////////////////////////////////////////
+// A. Imports
+//////////////////////////////////////////////
+
+@import "partials/breakpoints";
+
+//////////////////////////////////////////////
+// B. Custom Properties
+//////////////////////////////////////////////
+
+:root {
+    --primary: #e32831;
+    --dark: #1a1a1a;
+    --dark-b hsla(0, 0%, 100%, 0.075);
+    --light: #fff1e5;
+
+    --primary-text: white;
+    --secondary-text: white;
+
+    --light-text: #40362d;
+
+    --secondary-border: hsla(0, 0%, 0%, 0.125);
+
+    --a11y-link-color: currentColor;
+
+    --base-font-size: 20px;
+
+    --body-line-height: 1.365;
+    --body-font-family: "adobe-garamond-pro";
+
+    --header-line-height: 1.365;
+
+    --banner-headline-font-size: calc(var(--base-font-size) * 2.8);  // 
+
+    --h1-font-size: calc(var(--base-font-size) * 2.3); // 60px
+    --h2-font-size: calc(var(--base-font-size) * 2.2);  // 44
+    --h3-font-size: calc(var(--base-font-size) * 1.8);
+    --h4-font-size: calc(var(--base-font-size) * 1.6);
+    --h5-font-size: calc(var(--base-font-size) * 1.4); // 24px
+    --h6-font-size: calc(var(--base-font-size) * 1.1); // 22px
+
+}
+
+//////////////////////////////////////////////
+// C. Global Theme Styles
+//////////////////////////////////////////////
+
+a[data-logo="brand"] {
+    color: inherit;
+
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+    svg {
+        display: block;
+        fill: currentColor;
+        margin-bottom: var(--s1);
+    }
+}
+
+// Assign Sans-serif Font
+
+h2, .h2, 
+h3, .h3, 
+h4, .h4,
+h5, .h5,  
+
+.btn:not([class*="btn--icon-only"]),
+.sans-serif{
+    font-family: "neue-haas-unica", sans-serif;
+}
+
+.btn.btn--outline{
+    font-size: var(--font-size-md);
+    line-height: 1.2;
+}
+
+#theme-buttons {
+    --theme-btn-size: 24px;
+
+    > li > button {
+        padding: unset;
+        border-radius: 100%;
+        height: var(--theme-btn-size);
+        width: var(--theme-btn-size);
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            border-radius: inherit;
+            height: calc(var(--theme-btn-size) * .25);
+            width: calc(var(--theme-btn-size) * .25);
+
+            background-color: currentColor;
+
+            opacity: 0;
+        }
+
+        &.active::after {
+            opacity: 1;
+
+        }
+    }
+}
+
+#article-introduction {
+    @include breakpoints-up(lg) {
+        height: 100vh;
+    }
+}
+
+//////////////////////////////////////////////
+// D. Grid Layouts
+//////////////////////////////////////////////
+
+html, 
+body {
+    @include breakpoints-up(lg) {
+        --backdrop-fixed-height: 100%;
+
+        min-height: 640px;
+        height: 100vh;
+    }
+}
+
+#page {
+    --sidebar-width: 240px;
+    display: grid;
+
+    // Mobile
+
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "head"
+        "nav"
+        "main"
+        "foot";
+
+    > header {
+        grid-area: head;
+    }
+        
+    > nav {
+        grid-area: nav;
+    }
+
+    > main {
+        grid-area: main;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+    
+    > footer {
+        grid-area: foot;
+    }
+
+    // Desktop
+
+    @include breakpoints-up(lg){
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: var(--sidebar-width) 1fr;
+        grid-template-areas: 
+            "head main"
+            "nav main"
+            "foot main";
+    }
+
+}
+
+// Home Features
+
+#home-features {
+    display: grid;
+    grid-gap: var(--s1);
+
+    > * {
+        overflow: hidden;
+    }
+
+    .backdrop--fixed {
+        --backdrop--fixed-height: 100%;
+        height: 100%;
+    }
+    
+    // Mobile
+
+    grid-template-areas: 
+        "one"
+        "two"
+        "three";
+
+    > .one {
+        grid-area: one;
+    }
+
+    > .two {
+        grid-area: two;
+    }
+
+    > .three {
+        grid-area: three;
+    }
+
+    // Desktop
+
+    @include breakpoints-up(lg) {
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "one  one"
+            "two three";
+    }
+}
+
+// Work Thumbnails
+
+#work-grid{
+    display: grid;
+    gap: var(--spacer-2);
+
+    grid-template-columns: repeat(3, 1fr);
+
+}
