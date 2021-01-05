@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: 65b33c82-2b25-4363-8a5d-65f673795c6d
+handle: linkUrl
+instructions: ''
+name: 'Link URL'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url
