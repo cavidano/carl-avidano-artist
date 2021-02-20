@@ -82,9 +82,9 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: bio
+handle: about
 hasTitleField: false
-name: Bio
+name: About
 section: 3ed8dca8-3ce4-4519-93ea-a0c318607c5e
 sortOrder: 1
 titleFormat: '{section.name|raw}'

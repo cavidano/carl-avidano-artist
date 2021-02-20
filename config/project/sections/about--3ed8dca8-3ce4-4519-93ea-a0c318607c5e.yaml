@@ -1,11 +1,11 @@
 enableVersioning: true
-handle: bio
-name: Bio
+handle: about
+name: About
 propagationMethod: all
 siteSettings:
   57c787ad-978a-4e6c-b80b-40ea855b4233:
     enabledByDefault: true
     hasUrls: true
-    template: bio
-    uriFormat: bio
+    template: _layouts/about/_entry
+    uriFormat: about
 type: single

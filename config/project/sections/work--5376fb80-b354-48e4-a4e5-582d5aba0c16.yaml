@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: work
+name: Work
+propagationMethod: all
+siteSettings:
+  57c787ad-978a-4e6c-b80b-40ea855b4233:
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/work/_entry
+    uriFormat: 'work/{slug}'
+structure:
+  maxLevels: null
+  uid: 89af047b-f4b9-4d3a-b8c8-bed1bf04ac6c
+type: structure
