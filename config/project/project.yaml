@@ -1,13 +1,18 @@
-dateModified: 1609789363
+dateModified: 1613762480
 email:
   fromEmail: cavidano@gmail.com
   fromName: 'Carl Avidano'
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true
   name: 'Carl Avidano'
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

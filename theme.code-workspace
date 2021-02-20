@@ -1,0 +1,32 @@
+  {
+
+  	"settings": {
+
+  		"liveServer.settings.port": 5506, 
+
+  		"liveSassCompile.settings.includeItems": [
+			// Main SASS file is location
+  			"/web/src/css/theme.scss"
+  		],
+
+  		"liveSassCompile.settings.formats": [
+			{
+				"format": "compressed",
+				"extensionName": ".css",
+				"savePath": "/web/dist/css"
+		  	}
+		],
+
+  		"liveSassCompile.settings.autoprefix": [
+  			"last 1 version",
+  			"> 1%",
+  			"IE 11"
+		],
+		"git.ignoreLimitWarning": true,
+  	},
+
+  	"folders": [{
+  		"path": "."
+  	}],
+
+  }

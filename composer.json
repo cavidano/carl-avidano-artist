@@ -1,6 +1,7 @@
 {
   "require": {
-    "craftcms/cms": "3.5.17.1",
+    "craftcms/cms": "3.6.6",
+    "craftcms/redactor": "2.8.5",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
@@ -15,7 +16,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.2.5"
     }
   },
   "scripts": {

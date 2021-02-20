@@ -1,5 +1,4 @@
 /*
-
 In this file:
 
 // A. Imports
@@ -9,10 +8,13 @@ In this file:
 */
 
 //////////////////////////////////////////////
-// A. Imports
+// A. Core Framework Breakpoints
 //////////////////////////////////////////////
 
-@import "partials/breakpoints";
+$bp-sm: 400px; 
+$bp-md: 760px;
+$bp-lg: 1000px;
+$bp-xl: 1340px;
 
 //////////////////////////////////////////////
 // B. Custom Properties
@@ -20,8 +22,8 @@ In this file:
 
 :root {
     --primary: #e32831;
-    --dark: #1a1a1a;
-    --dark-b hsla(0, 0%, 100%, 0.075);
+    
+    --dark: #000000;
     --light: #fff1e5;
 
     --primary-text: white;
@@ -40,7 +42,8 @@ In this file:
 
     --header-line-height: 1.365;
 
-    --banner-headline-font-size: calc(var(--base-font-size) * 2.8);  // 
+    --banner-headline-font-size: calc(var(--base-font-size) * 3);  // 
+    --banner-headline-font-weight: var(--body-font-weight-bold);
 
     --h1-font-size: calc(var(--base-font-size) * 2.3); // 60px
     --h2-font-size: calc(var(--base-font-size) * 2.2);  // 44
@@ -51,52 +54,65 @@ In this file:
 
 }
 
+body {
+    --body-max-width: 100%;
+}
+
+.backdrop--fixed {
+    --backdrop-fixed-height: 100%;
+}
+
 //////////////////////////////////////////////
 // C. Global Theme Styles
 //////////////////////////////////////////////
 
 a[data-logo="brand"] {
-    color: inherit;
+    display: flex;
+    flex-direction: column;
 
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    color: inherit;
+    text-align: center;
 
     svg {
-        display: block;
+        display: inline-block;
         fill: currentColor;
-        margin-bottom: var(--s1);
+        margin-bottom: var(--spacer-1);
     }
 }
 
 // Assign Sans-serif Font
 
+h1, .h1,
 h2, .h2, 
 h3, .h3, 
 h4, .h4,
 h5, .h5,  
 
-.btn:not([class*="btn--icon-only"]),
-.sans-serif{
+.button:not([class*="btn--icon-only"]),
+.sans-serif {
     font-family: "neue-haas-unica", sans-serif;
 }
 
-.btn.btn--outline{
-    font-size: var(--font-size-md);
-    line-height: 1.2;
+.tagline {
+    @extend .sans-serif;
+    font-size: var(--font-size-sm);
 }
 
 #theme-buttons {
-    --theme-btn-size: 24px;
+    --theme-btn-size: 20px;
 
-    > li > button {
+    display: flex;
+    justify-content: center;
+    min-height: unset;
+
+    > button {
         padding: unset;
         border-radius: 100%;
         height: var(--theme-btn-size);
         width: var(--theme-btn-size);
         position: relative;
 
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             top: 50%;
@@ -119,82 +135,16 @@ h5, .h5,
     }
 }
 
-#article-introduction {
-    @include breakpoints-up(lg) {
-        height: 100vh;
-    }
-}
+// Introduction
 
-//////////////////////////////////////////////
-// D. Grid Layouts
-//////////////////////////////////////////////
-
-html, 
-body {
-    @include breakpoints-up(lg) {
-        --backdrop-fixed-height: 100%;
-
-        min-height: 640px;
-        height: 100vh;
-    }
-}
-
-#page {
-    --sidebar-width: 240px;
+#introduction {
     display: grid;
-
-    // Mobile
-
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: 
-        "head"
-        "nav"
-        "main"
-        "foot";
-
-    > header {
-        grid-area: head;
-    }
-        
-    > nav {
-        grid-area: nav;
-    }
-
-    > main {
-        grid-area: main;
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-    }
-    
-    > footer {
-        grid-area: foot;
-    }
-
-    // Desktop
-
-    @include breakpoints-up(lg){
-        grid-template-rows: auto 1fr auto;
-        grid-template-columns: var(--sidebar-width) 1fr;
-        grid-template-areas: 
-            "head main"
-            "nav main"
-            "foot main";
-    }
-
-}
-
-// Home Features
-
-#home-features {
-    display: grid;
-    grid-gap: var(--s1);
 
     > * {
         overflow: hidden;
     }
 
     .backdrop--fixed {
-        --backdrop--fixed-height: 100%;
         height: 100%;
     }
     
@@ -219,21 +169,12 @@ body {
 
     // Desktop
 
-    @include breakpoints-up(lg) {
+    @media (min-width: $bp-lg) {
         grid-template-rows: 2fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
             "one  one"
             "two three";
     }
-}
-
-// Work Thumbnails
-
-#work-grid{
-    display: grid;
-    gap: var(--spacer-2);
-
-    grid-template-columns: repeat(3, 1fr);
 
 }
