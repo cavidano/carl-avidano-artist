@@ -6,7 +6,15 @@
 
 	<div class="container medium margin-y-4">
 
-		{% for item in craft.entries.section('journal').limit(25).all() %}
+		{% set entryQuery = craft.entries()
+			.section('journal')
+			.orderBy('postDate desc')
+			.limit(10)
+		%}
+		
+		{% set entries = entryQuery.all() %}
+
+		{% for entry in entries %}
 
 		<div class="grid grid--cells-6--md align-items-center margin-y-3">
 			<div class="grid__cell">
@@ -15,11 +23,11 @@
 			<div class="grid__cell">
 				<div class="padding-4">
 					<p class="sans-serif font-size-sm margin-bottom-2">
-						{{ item.postDate | date('F d, Y') }}
+						{{ entry.postDate | date('F d, Y') }}
 					</p>
 					<h2 class="h1">
-						<a class="display-block" href="{{ item.url }}">
-							{{ item.title }}
+						<a class="display-block" href="{{ entry.url }}">
+							{{ entry.title }}
 						</a>
 					</h2>
 				</div>

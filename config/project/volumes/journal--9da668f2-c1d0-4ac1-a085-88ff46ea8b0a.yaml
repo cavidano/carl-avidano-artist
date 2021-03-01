@@ -1,5 +1,5 @@
 fieldLayouts:
-  dfeb10cd-510d-4ecf-a875-ba3d99015c96:
+  8f9f0707-fe8f-489c-84ca-ee8187a7e7c4:
     tabs:
       -
         elements:
@@ -28,13 +28,13 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: homepage
+handle: journal
 hasUrls: true
-name: Homepage
+name: Journal
 settings:
-  path: '@webroot/images/uploads/homepage'
+  path: '@webroot/images/uploads/journal'
 sortOrder: 0
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local
-url: images/
+url: '@web/images/'

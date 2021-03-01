@@ -4,12 +4,63 @@
 
 <div class="border-top border-bottom overflow-hidden">
 
-	<div class="container medium margin-y-4">
-	<h2>
-		{{ entry.title }}
-	</h2>
-	</div>
+	<header class="container narrow margin-y-4 " id="article-header">
+
+		<h1 class="banner-headline">
+			{{ entry.title }}
+		</h1>
+
+		<div class="date-and-byline sans-serif font-size-sm">
+			<span>
+				<strong>{{ entry.postDate | date('F d, Y') }}</strong>	
+			</span>
+			<span class="opacity-80">
+				by Carl Avidano
+			</span>
+		</div>
+
+	</header>
+
+	<hr class="cool">
 	
+	<div class="art">
+	
+	
+
+	{% set blockQuery = entry.articleMatrix.all() %}
+
+	{% for block in blockQuery %}
+
+        {% switch block.type %}
+
+        {% case 'textBlock' %}
+
+			<div class="container narrow margin-y-4">
+				{{ block.text }}
+			</div>
+
+		{% case 'figureBlock' %}
+
+			{% set image = block.image.one() %}
+
+			<figure class="container {{ block.width }} margin-y-4">
+
+				<img src="{{ image.url() }}" alt=""/>
+			
+				{% if block.caption %}
+					<figcaption>
+						{{ block.caption }}
+					</figcaption>
+				{% endif %}
+
+			</figure>
+
+		{% endswitch %}
+
+    {% endfor %}
+	
+	
+	</div>
 </div>
 
 {% endblock %}
