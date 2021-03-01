@@ -12,7 +12,9 @@
 
 		<div class="date-and-byline sans-serif font-size-sm">
 			<span>
-				<strong>{{ entry.postDate | date('F d, Y') }}</strong>	
+				<strong>
+					{{ entry.postDate | date('F d, Y') }}
+				</strong>	
 			</span>
 			<span class="opacity-80">
 				by Carl Avidano
@@ -53,14 +55,16 @@
 
 			<figure class="margin-y-5">
 
+				{% if block.image %}
 				<div class="container {{ block.width }}">
 					<img src="{{ image.url() }}" alt=""/>
 				</div>
+				{% endif %}
 
 				{% if block.caption %}
-					<figcaption class="container narrow">
-						{{ block.caption }}
-					</figcaption>
+				<figcaption class="container narrow">
+					{{ block.caption }}
+				</figcaption>
 				{% endif %}
 
 			</figure>
