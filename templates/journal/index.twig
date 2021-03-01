@@ -5,11 +5,31 @@
 <div class="border-top border-bottom overflow-hidden">
 
 	<div class="container medium margin-y-4">
-		<h2>
-			Hello
-		</h2>
+
+		{% for item in craft.entries.section('journal').limit(25).all() %}
+
+		<div class="grid grid--cells-6--md align-items-center margin-y-3">
+			<div class="grid__cell">
+				<img src="https://via.placeholder.com/700x500.webp?text=Thumbnail" alt="Placeholder">
+			</div>
+			<div class="grid__cell">
+				<div class="padding-4">
+					<p class="sans-serif font-size-sm">
+						{{ item.postDate | date('M d, Y') }}
+					</p>
+					<h2 class="h1">
+						<a href="{{ item.url }}">
+							{{ item.title }}
+						</a>
+					</h2>
+				</div>
+			</div>
+		</div>
+        
+		{% endfor %}
+
 	</div>
-	
+
 </div>
 
 {% endblock %}
