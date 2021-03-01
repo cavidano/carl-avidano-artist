@@ -14,11 +14,11 @@
 			</div>
 			<div class="grid__cell">
 				<div class="padding-4">
-					<p class="sans-serif font-size-sm">
-						{{ item.postDate | date('M d, Y') }}
+					<p class="sans-serif font-size-sm margin-bottom-2">
+						{{ item.postDate | date('F d, Y') }}
 					</p>
 					<h2 class="h1">
-						<a href="{{ item.url }}">
+						<a class="display-block" href="{{ item.url }}">
 							{{ item.title }}
 						</a>
 					</h2>

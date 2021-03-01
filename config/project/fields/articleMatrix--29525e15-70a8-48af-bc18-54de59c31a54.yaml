@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 65b33c82-2b25-4363-8a5d-65f673795c6d
+handle: articleMatrix
+instructions: ''
+name: 'Article Matrix'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_articlematrix}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
