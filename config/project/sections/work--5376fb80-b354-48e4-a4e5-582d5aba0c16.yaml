@@ -9,6 +9,6 @@ siteSettings:
     template: work/index
     uriFormat: 'work/{slug}'
 structure:
-  maxLevels: null
-  uid: 89af047b-f4b9-4d3a-b8c8-bed1bf04ac6c
+  maxLevels: 2
+  uid: 220e0909-1764-431c-952c-49af2842a7da
 type: structure

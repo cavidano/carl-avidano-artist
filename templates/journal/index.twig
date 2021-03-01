@@ -23,9 +23,9 @@
 			<div class="grid__cell">
 				<div class="padding-4">
 					<p class="sans-serif font-size-sm margin-bottom-2">
-						{{ entry.postDate | date('F d, Y') }}
+						<strong>{{ entry.postDate | date('F d, Y') }}</strong> 
 					</p>
-					<h2 class="h1">
+					<h2 class="banner-headline">
 						<a class="display-block" href="{{ entry.url }}">
 							{{ entry.title }}
 						</a>

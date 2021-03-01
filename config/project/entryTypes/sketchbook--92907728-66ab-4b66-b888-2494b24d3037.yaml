@@ -1,5 +1,5 @@
 fieldLayouts:
-  083a86a2-ac8e-4ee6-a89f-b445286de06e:
+  01c4f5fd-14d7-4227-bc5c-1ab288fd06dd:
     tabs:
       -
         elements:
@@ -28,11 +28,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: work
+handle: sketchbook
 hasTitleField: true
-name: Work
+name: Sketchbook
 section: 5376fb80-b354-48e4-a4e5-582d5aba0c16
-sortOrder: 1
+sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
