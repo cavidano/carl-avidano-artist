@@ -4,7 +4,7 @@
 
 <div class="border-top border-bottom overflow-hidden">
 
-	<header class="container narrow margin-y-4 " id="article-header">
+	<header class="container narrow margin-y-4" id="article-header">
 
 		<h1 class="banner-headline">
 			{{ entry.title }}
@@ -21,11 +21,19 @@
 
 	</header>
 
-	<hr class="cool">
-	
-	<div class="art">
-	
-	
+	<div class="container narrow margin-y-3" role="menu">
+		<div class="button-group justify-content-start font-size-md">
+			<a class="button button--icon-only" href="#1" aria-label="Facebook">
+				<span class="nyc_icon_facebook" aria-hidden="true"></span>
+			</a>
+			<a class="button button--icon-only" href="#1" aria-label="twitter">
+				<span class="nyc_icon_twitter" aria-hidden="true"></span>
+			</a>
+			<a class="button button--icon-only" href="#1" aria-label="twitter">
+				<span class="nyc_icon_mail" aria-hidden="true"></span>
+			</a>
+		</div>
+	</div>
 
 	{% set blockQuery = entry.articleMatrix.all() %}
 
@@ -43,12 +51,14 @@
 
 			{% set image = block.image.one() %}
 
-			<figure class="container {{ block.width }} margin-y-4">
+			<figure class="margin-y-5">
 
-				<img src="{{ image.url() }}" alt=""/>
-			
+				<div class="container {{ block.width }}">
+					<img src="{{ image.url() }}" alt=""/>
+				</div>
+
 				{% if block.caption %}
-					<figcaption>
+					<figcaption class="container narrow">
 						{{ block.caption }}
 					</figcaption>
 				{% endif %}
@@ -58,9 +68,7 @@
 		{% endswitch %}
 
     {% endfor %}
-	
-	
-	</div>
+
 </div>
 
 {% endblock %}
