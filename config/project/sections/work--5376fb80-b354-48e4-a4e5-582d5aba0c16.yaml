@@ -6,6 +6,6 @@ siteSettings:
   57c787ad-978a-4e6c-b80b-40ea855b4233:
     enabledByDefault: true
     hasUrls: true
-    template: work/index
-    uriFormat: 'work/{slug}'
+    template: work/_entry
+    uriFormat: '{workCategory.one().uri}/{slug}'
 type: channel
