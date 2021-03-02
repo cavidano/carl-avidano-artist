@@ -172,13 +172,14 @@
 
 		<script type="text/javascript">
 			
-			const coolURL = document.getElementById("cool").src;
+			const coolURL = document.getElementById("work-image").src;
 
-			console.log(coolURL)
+			console.log(coolURL);
 
 			var viewer = OpenSeadragon({
 
                 id: "openseadragon",
+				toolbar:       "toolbarDiv",
 				zoomInButton:   "zoom-in",
 				zoomOutButton:  "zoom-out",
 				homeButton:     "home",

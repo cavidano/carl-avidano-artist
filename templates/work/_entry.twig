@@ -12,20 +12,19 @@
 
 	</header>
 
-
 	<div class="container medium">
 
 		{% for image in entry.workImage.all() %}
-			<img class="display-none" src="{{ image.getUrl() }}" alt="{{ entry.title }}" id="cool" >
+			<img class="display-none" src="{{ image.getUrl() }}" alt="{{ entry.title }}" id="work-image">
 		{% endfor %}
 		
 		<div class="workCanvas">
 
 			<div class="workCanvas__display" id="openseadragon"></div>
 
-			<div class="workCanvas__toolbar">
+			<div class="workCanvas__toolbar" id="toolbarDiv">
 
-				<div class="button-group justify-content-start">
+				<div class="button-group font-size-md">
 					<button class="button button--icon-only" aria-label="Zoom In" id="zoom-in">
 						<span class="nyc_icon_plus" aria-hidden="true"></span>
 					</button>
