@@ -40,7 +40,7 @@
 
 				<div class="grid__cell">
 					<a class="display-block" href="{{ entry.url }}">
-						{% for image in entry.workImage.all() %}
+						{% for image in entry.workThumbnail.all() %}
 							<img src="{{ image.getUrl('workThumbnail') }}" alt="{{ entry.title }}">
 						{% endfor %}
 					</a>
