@@ -15,8 +15,8 @@ settings:
   localizeRelations: false
   previewMode: full
   restrictFiles: '1'
-  selectionLabel: ''
-  showSiteMenu: false
+  selectionLabel: 'Assign Full Image'
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:617e74de-ae87-4fe8-8f41-b24b566ce700'

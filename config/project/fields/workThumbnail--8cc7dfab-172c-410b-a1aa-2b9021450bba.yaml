@@ -14,8 +14,8 @@ settings:
   localizeRelations: false
   previewMode: thumbs
   restrictFiles: ''
-  selectionLabel: 'Assign a Thumbnail'
-  showSiteMenu: false
+  selectionLabel: 'Assign Custom Thumbnail'
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:617e74de-ae87-4fe8-8f41-b24b566ce700'
