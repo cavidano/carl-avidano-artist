@@ -11,7 +11,7 @@ settings:
   branchLimit: '1'
   limit: null
   localizeRelations: false
-  selectionLabel: 'Select a Category'
+  selectionLabel: 'Assign a Category'
   showSiteMenu: true
   source: 'group:09c26134-26f2-443d-ba20-149f65031b20'
   sources: '*'

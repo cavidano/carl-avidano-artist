@@ -4,35 +4,51 @@
 
 <div class="border-top border-bottom overflow-hidden">
 
-	<div class="container narrow margin-y-4">
+	<nav class="container narrow margin-y-4">
 
 		<ul class="nav nav--divider nav--horizontal border sans-serif font-size-sm">
 			<li>
-				<a href="/work/drawing">Drawing</a>
+				<a href="/work/drawing" {% if category == 'Drawing' %} aria-current="page" {% endif %}>
+					Drawing
+				</a>
 			</li>
 			<li>
-				<a href="/work/painting">Painting</a>
+				<a href="/work/painting" {% if category == 'Painting' %} aria-current="page" {% endif %}>
+					Painting
+				</a>
 			</li>
 			<li>
-				<a href="/work/sketchbook">Sketchbook</a>
+				<a href="/work/sketchbook" {% if category == 'Sketchbook' %} aria-current="page" {% endif %}>
+					Sketchbook
+				</a>
 			</li>
 		</ul>
 
-	</div>
+	</nav>
 
 	<div class="container medium margin-y-4">
 	
-		<h2 class="text-color-primary">
+		<h1 class="screen-reader-only">
 			{{ category.title }}
-		</h2>
+		</h1>
 
-		{% for entry in craft.entries.section('work').relatedTo(category).all() %}
+		<div class="container medium margin-y-4">
 
-		<div class="margin-y-4">
-			<a href="{{ entry.url }}">{{ entry.title }}??</a>
+			<div class="grid grid--gap-3 grid--cells-4--md justify-content-center">
+
+				{% for entry in craft.entries.section('work').relatedTo(category).all() %}
+
+				<div class="grid__cell">
+					<a href="{{ entry.url }}">
+						<img src="https://via.placeholder.com/800x800.webp?text={{ entry.title }}" alt="Placeholder">
+					</a>
+				</div>
+
+				{% endfor %}
+			
+			</div>
+
 		</div>
-
-		{% endfor %}
 
 
 	</div>
