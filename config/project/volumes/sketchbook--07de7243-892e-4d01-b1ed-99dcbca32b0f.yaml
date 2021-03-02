@@ -1,5 +1,5 @@
 fieldLayouts:
-  eab9ce3a-5f7c-49cd-9744-53f5e53a4d69:
+  b6ab1e76-a802-44b8-9ad2-ce61326d566d:
     tabs:
       -
         elements:
@@ -28,13 +28,13 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: drawing
+handle: sketchbook
 hasUrls: true
-name: Drawing
+name: Sketchbook
 settings:
-  path: '@webroot/images/uploads/work/drawing'
-sortOrder: 0
+  path: '@webroot/images/uploads/work/sketchbook'
+sortOrder: 2
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local
-url: '@web/images/uploads/work/drawing'
+url: '@web/images/uploads/work/sketchbook'

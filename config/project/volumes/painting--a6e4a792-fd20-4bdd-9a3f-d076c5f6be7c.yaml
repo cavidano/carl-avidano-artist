@@ -1,5 +1,5 @@
 fieldLayouts:
-  eab9ce3a-5f7c-49cd-9744-53f5e53a4d69:
+  5799cfab-60d6-4c79-bbda-3f588e5ab84e:
     tabs:
       -
         elements:
@@ -28,13 +28,13 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: drawing
+handle: painting
 hasUrls: true
-name: Drawing
+name: Painting
 settings:
-  path: '@webroot/images/uploads/work/drawing'
-sortOrder: 0
+  path: '@webroot/images/uploads/work/painting'
+sortOrder: 1
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local
-url: '@web/images/uploads/work/drawing'
+url: '@web/images/uploads/work/painting'
