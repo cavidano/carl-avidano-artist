@@ -168,6 +168,31 @@
 		<!-- Theme JS -->
 		<script src="/src/js/theme.js"></script>
 
+		<script src="https://cdn.jsdelivr.net/npm/openseadragon@2.4/build/openseadragon/openseadragon.min.js"></script>
+
+		<script type="text/javascript">
+			
+			const coolURL = document.getElementById("cool").src;
+
+			console.log(coolURL)
+
+			var viewer = OpenSeadragon({
+
+                id: "openseadragon",
+				zoomInButton:   "zoom-in",
+				zoomOutButton:  "zoom-out",
+				homeButton:     "home",
+				fullPageButton: "full-page",
+				nextButton:     "next",
+				previousButton: "previous",
+
+                tileSources:   {
+                	type: 'image',
+                	url:  coolURL
+                }
+            });
+        </script>
+
 	</body>
 
 </html>

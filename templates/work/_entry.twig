@@ -4,13 +4,38 @@
 
 <div class="border-top border-bottom overflow-hidden">
 
-	<header class="container narrow">
+	<header class="container narrow display-none">
 
 		<h1 class="banner-headline margin-y-4">
 			{{ entry.title }}
 		</h1>
 
 	</header>
+
+<div id="toolbarDiv" class="toolbar" style="position: relative;">
+	<span>
+		|
+		<a id="zoom-in" href="#zoom-in" title="Zoom in" style="display: inline-block; position: relative;">Zoom In</a>
+		|
+		<a id="zoom-out" href="#zoom-out" title="Zoom out" style="display: inline-block; position: relative;">Zoom Out</a>
+		|
+		<a id="home" href="#home" title="Go home" style="display: inline-block; position: relative;">Home</a>
+		|
+		<a id="full-page" href="#full-page" title="Toggle full page" style="display: inline-block; position: relative;">Full Page</a>
+	</span>
+	
+</div>
+
+	<div class="container medium">
+
+		{% for image in entry.workImage.all() %}
+			<img class="display-none" src="{{ image.getUrl() }}" alt="{{ entry.title }}" id="cool" >
+		{% endfor %}
+		
+		<div id="openseadragon"></div>
+
+	</div>
+
 
 </div>
 
