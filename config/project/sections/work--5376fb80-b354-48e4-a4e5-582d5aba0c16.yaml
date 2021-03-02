@@ -8,7 +8,4 @@ siteSettings:
     hasUrls: true
     template: work/index
     uriFormat: 'work/{slug}'
-structure:
-  maxLevels: 2
-  uid: 220e0909-1764-431c-952c-49af2842a7da
-type: structure
+type: channel

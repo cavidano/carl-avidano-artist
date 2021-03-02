@@ -1,5 +1,5 @@
 fieldLayouts:
-  170ffb6f-3ec1-4ee7-8d73-c2d72a2079d3:
+  28aeaf0c-5914-4b1d-92ee-8bac05d81765:
     tabs:
       -
         elements:
@@ -23,16 +23,18 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\TitleField
             warning: null
             width: 100
         name: Content
         sortOrder: 1
-handle: drawing
-hasTitleField: true
-name: Drawing
-section: 5376fb80-b354-48e4-a4e5-582d5aba0c16
-sortOrder: 2
-titleFormat: null
-titleTranslationKeyFormat: null
-titleTranslationMethod: site
+handle: work
+name: Work
+siteSettings:
+  57c787ad-978a-4e6c-b80b-40ea855b4233:
+    hasUrls: true
+    template: work/_category
+    uriFormat: 'work/{slug}'
+structure:
+  maxLevels: null
+  uid: 20aa9445-ad94-4c70-a382-b28f81f48aa5

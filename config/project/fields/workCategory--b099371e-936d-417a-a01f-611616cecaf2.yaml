@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 377746dc-0283-4f24-ac57-9417416ceaee
+handle: workCategory
+instructions: ''
+name: 'Work Category'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: 'Select a Category'
+  showSiteMenu: true
+  source: 'group:09c26134-26f2-443d-ba20-149f65031b20'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

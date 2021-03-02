@@ -1,0 +1,42 @@
+{% extends "_layouts/main" %}
+
+{% block main %}
+
+<div class="border-top border-bottom overflow-hidden">
+
+	<div class="container narrow margin-y-4">
+
+		<ul class="nav nav--divider nav--horizontal border sans-serif font-size-sm">
+			<li>
+				<a href="/work/drawing">Drawing</a>
+			</li>
+			<li>
+				<a href="/work/painting">Painting</a>
+			</li>
+			<li>
+				<a href="/work/sketchbook">Sketchbook</a>
+			</li>
+		</ul>
+
+	</div>
+
+	<div class="container medium margin-y-4">
+	
+		<h2 class="text-color-primary">
+			{{ category.title }}
+		</h2>
+
+		{% for entry in craft.entries.section('work').relatedTo(category).all() %}
+
+		<div class="margin-y-4">
+			<a href="{{ entry.url }}">{{ entry.title }}??</a>
+		</div>
+
+		{% endfor %}
+
+
+	</div>
+
+</div>
+
+{% endblock %}
