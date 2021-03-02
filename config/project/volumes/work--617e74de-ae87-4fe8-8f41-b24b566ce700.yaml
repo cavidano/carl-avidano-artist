@@ -28,13 +28,13 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: drawing
+handle: work
 hasUrls: true
-name: Drawing
+name: Work
 settings:
-  path: '@webroot/images/uploads/work/drawing'
+  path: '@webroot/images/uploads/work'
 sortOrder: 0
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local
-url: '@web/images/uploads/work/drawing'
+url: '@web/images/uploads/work'

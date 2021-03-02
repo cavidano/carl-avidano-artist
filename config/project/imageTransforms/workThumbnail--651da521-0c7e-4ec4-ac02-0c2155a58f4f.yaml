@@ -1,0 +1,9 @@
+format: jpg
+handle: workThumbnail
+height: 600
+interlace: none
+mode: crop
+name: 'Work Thumbnail'
+position: center-center
+quality: 82
+width: 600

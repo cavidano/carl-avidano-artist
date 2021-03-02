@@ -33,7 +33,7 @@ hasUrls: true
 name: Journal
 settings:
   path: '@webroot/images/uploads/journal'
-sortOrder: 0
+sortOrder: 4
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local

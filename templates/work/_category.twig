@@ -39,8 +39,10 @@
 				{% for entry in craft.entries.section('work').relatedTo(category).all() %}
 
 				<div class="grid__cell">
-					<a href="{{ entry.url }}">
-						<img src="https://via.placeholder.com/800x800.webp?text={{ entry.title }}" alt="Placeholder">
+					<a class="display-block" href="{{ entry.url }}">
+						{% for image in entry.workImage.all() %}
+							<img src="{{ image.getUrl('workThumbnail') }}" alt="{{ entry.title }}">
+						{% endfor %}
 					</a>
 				</div>
 
