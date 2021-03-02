@@ -32,7 +32,7 @@ handle: drawing
 hasUrls: true
 name: Drawing
 settings:
-  path: '@webroot/images/uploads/work/drawing'
+  path: '@webroot/src/images/work/drawing'
 sortOrder: 0
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
