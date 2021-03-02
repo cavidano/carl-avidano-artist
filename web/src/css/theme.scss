@@ -211,15 +211,26 @@ figcaption,
     }
 }
 
+// Work Image Zoom
+
 .workCanvas {
     position: relative;
     width: 100%;
     height: 1000px;
+    background-color: yellow;
 }
 
 .workCanvas__toolbar,
 .workCanvas__display {
     position: absolute;
+}
+
+.workCanvas__display {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .workCanvas__toolbar {
@@ -233,10 +244,9 @@ figcaption,
 
 }
 
-.workCanvas__display {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
+.openseadragon-canvas {
+    &:focus, 
+    &:active{
+        outline: none;
+    }
 }
