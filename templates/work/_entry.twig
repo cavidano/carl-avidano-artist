@@ -45,7 +45,35 @@
 
 	</div>
 
-
 </div>
 
 {% endblock %}
+
+{# Register OpenSeadragon #}
+
+{% js "https://cdn.jsdelivr.net/npm/openseadragon@2.4/build/openseadragon/openseadragon.min.js" %}
+
+{% js %}
+
+	const coolURL = document.getElementById("work-image").src;
+
+	console.log(coolURL);
+
+	var viewer = OpenSeadragon({
+
+		id: "openseadragon",
+		toolbar:       "toolbarDiv",
+		zoomInButton:   "zoom-in",
+		zoomOutButton:  "zoom-out",
+		homeButton:     "home",
+		fullPageButton: "full-page",
+		nextButton:     "next",
+		previousButton: "previous",
+
+		tileSources:   {
+			type: 'image',
+			url:  coolURL
+		}
+	});
+
+{% endjs %}
