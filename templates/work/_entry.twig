@@ -2,54 +2,92 @@
 
 {% block main %}
 
-<div class="border-top border-bottom overflow-hidden">
+<div class="full-height border-top">
 
-	<header class="container narrow display-none">
+	<div class="grid grid--gap-3 grid--cells-6--lg align-items-center--lg height-100--lg">
 
-		<h1 class="banner-headline margin-y-4">
-			{{ entry.title }}
-		</h1>
+		<div class="grid__cell">
+			<div class="container narrow">
+				<h1>
+					{{ entry.title }}
+				</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati ea ipsum, iusto corrupti commodi reiciendis.
+				</p>
+			</div>
+		</div>
 
-	</header>
+		<div class="grid__cell subtle-fill height-100--lg display-flex">
+			<div class="container narrow margin-y-auto">
 
-	<div class="container medium">
+				{% for image in entry.workImage.all() %}
+					<img class="margin-bottom-3" src="{{ image.getUrl() }}" alt="{{ entry.title }}" id="work-image" data-modal-open="modal-1">
+				{% endfor %}
 
-		{% for image in entry.workImage.all() %}
-			<img class="display-none" src="{{ image.getUrl() }}" alt="{{ entry.title }}" id="work-image">
-		{% endfor %}
-		
-		<div class="workCanvas">
-
-			<div class="workCanvas__display" id="openseadragon"></div>
-
-			<div class="workCanvas__toolbar" id="toolbarDiv">
-
-				<div class="button-group font-size-md">
-					<button class="button button--icon-only" aria-label="Zoom In" id="zoom-in">
-						<span class="nyc_icon_plus" aria-hidden="true"></span>
-					</button>
-					<button class="button button--icon-only" aria-label="Zoom Out" id="zoom-out">
-						<span class="nyc_icon_minus" aria-hidden="true"></span>
-					</button>
-					<button class="button button--icon-only" aria-label="Original Size" id="home">
-						<span class="nyc_icon_shrink" aria-hidden="true"></span>
-					</button>
-					<button class="button button--outline" id="full-page">
-						Full Screen
-					</button>
-				</div>
+				<button class="button button--outline font-size-md" data-modal-open="modal-1">
+					Enlarge
+				</button>
 				
 			</div>
-		
 		</div>
 
 	</div>
 
 </div>
 
+<div class="modal theme-dark" id="modal-1" role="dialog">
+
+	<div class="modal__content" aria-labelledby="modal-1-title">
+
+		<header class="modal__content__head display-none">
+			<h2 class="h4" id="modal-1-title">
+				Modal Title
+			</h2>
+			<button class="button button--icon-only" data-modal-close>
+				<span class="screen-reader-only">Close Modal</span>
+				<span class="fas fa-times"></span>
+			</button>
+		</header>
+
+		<main class="modal__content__body height-100vh border padding-0" id="modal-1-content">
+
+			<div class="workCanvas">
+
+				<div class="workCanvas__display" id="openseadragon"></div>
+
+				<div class="workCanvas__toolbar" id="toolbarDiv">
+
+					<div class="button-group font-size-md">
+						<button class="button button--icon-only" aria-label="Zoom In" id="zoom-in">
+							<span class="nyc_icon_plus" aria-hidden="true"></span>
+						</button>
+						<button class="button button--icon-only" aria-label="Zoom Out" id="zoom-out">
+							<span class="nyc_icon_minus" aria-hidden="true"></span>
+						</button>
+						<button class="button button--icon-only" aria-label="Original Size" id="home">
+							<span class="nyc_icon_shrink" aria-hidden="true"></span>
+						</button>
+						<button class="button button--outline" id="full-page">
+							Full Screen
+						</button>
+					</div>
+
+				</div>
+
+			</div>
+
+		</main>
+
+	</div>
+	<!-- .modal__content -->
+
+</div>
+<!-- #modal-1 -->
+
+
 {% endblock %}
 
-{# Register OpenSeadragon #}
+{# Register OpenSeadragon JS #}
 
 {% js "https://cdn.jsdelivr.net/npm/openseadragon@2.4/build/openseadragon/openseadragon.min.js" %}
 

@@ -88,7 +88,6 @@ a[data-logo="brand"] {
 
 // Assign Sans-serif Font
 
-h1, .h1,
 h2, .h2, 
 h3, .h3, 
 h4, .h4,
@@ -98,6 +97,33 @@ h5, .h5,
 figcaption,
 .sans-serif {
     font-family: "neue-haas-unica", sans-serif;
+}
+
+
+h1, .h1 {
+    font-weight: normal;
+}
+
+// Subtle Fill
+
+.subtle-fill {
+    position: relative;
+
+     &::before {
+        position: absolute;
+        content: "";
+        
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        border-radius: inherit;
+        pointer-events: none;
+
+        background-color: currentColor;
+        opacity: var(--button-faint-fill-opacity);
+    }
 }
 
 // Theme Color Buttons
@@ -216,7 +242,7 @@ figcaption,
 .workCanvas {
     position: relative;
     width: 100%;
-    height: 1000px;
+    height: 100%;
     // background-color: yellow;
 }
 

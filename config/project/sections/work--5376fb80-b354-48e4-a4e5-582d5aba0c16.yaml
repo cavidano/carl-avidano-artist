@@ -8,4 +8,7 @@ siteSettings:
     hasUrls: true
     template: work/_entry
     uriFormat: '{workCategory.one().uri}/{slug}'
-type: channel
+structure:
+  maxLevels: 1
+  uid: 25fd2b8a-e659-4c6f-a679-0d79c8a5dec0
+type: structure
