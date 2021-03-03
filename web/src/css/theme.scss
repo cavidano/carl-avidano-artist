@@ -99,7 +99,6 @@ figcaption,
     font-family: "neue-haas-unica", sans-serif;
 }
 
-
 h1, .h1 {
     font-weight: normal;
 }
@@ -239,14 +238,21 @@ h1, .h1 {
 
 // Work Image Zoom
 
+.workCanvas-toolbar {
+    position: relative;
+    z-index: 200;
+
+    button.button--icon-only {
+        display: flex !important;
+    }
+}
+
 .workCanvas {
     position: relative;
     width: 100%;
     height: 100%;
-    // background-color: yellow;
 }
 
-.workCanvas__toolbar,
 .workCanvas__display {
     position: absolute;
 }
@@ -259,20 +265,26 @@ h1, .h1 {
     z-index: 100;
 }
 
-.workCanvas__toolbar {
-    top: var(--spacer-3);
-    left: var(--spacer-3);
-    z-index: 200;
-
-    button.button--icon-only {
-        display: flex !important;
-    }
-
-}
-
 .openseadragon-canvas {
     &:focus, 
     &:active{
         outline: none;
+    }
+}
+
+.artwork-info {
+    list-style: none;
+    @extend .sans-serif;
+    font-size: var(--font-size-md);
+
+    > li {
+        display: flex;
+
+        > :first-child{
+            width: 33.3333%;
+        }
+    }
+    > li:not(:last-child) {
+        margin-bottom: var(--spacer-2);
     }
 }

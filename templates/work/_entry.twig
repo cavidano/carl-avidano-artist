@@ -7,25 +7,42 @@
 	<div class="grid grid--gap-3 grid--cells-6--lg align-items-center--lg height-100--lg">
 
 		<div class="grid__cell">
-			<div class="container narrow">
+			<div class="container narrow padding-y-4">
 				<h1>
 					{{ entry.title }}
 				</h1>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati ea ipsum, iusto corrupti commodi reiciendis.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati ea ipsum, iusto corrupti commodi reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				</p>
+
+				<ul class="artwork-info">
+					<li>
+						<strong>Medium:</strong>
+						<span>Oil on Canvas</span>
+					</li> 
+					<li>
+						<strong>Dimensions:</strong>
+						<span>58 x 43 7/8 in</span>
+					</li>
+					<li>
+						<strong>Category:</strong>
+						<span>Painting</span>
+					</li>
+				</ul>
+
 			</div>
+
 		</div>
 
 		<div class="grid__cell subtle-fill height-100--lg display-flex">
-			<div class="container narrow margin-y-auto">
+			<div class="container narrow padding-y-4 margin-y-auto">
 
 				{% for image in entry.workImage.all() %}
 					<img class="margin-bottom-3" src="{{ image.getUrl() }}" alt="{{ entry.title }}" id="work-image" data-modal-open="modal-1">
 				{% endfor %}
 
-				<button class="button button--outline font-size-md" data-modal-open="modal-1">
-					Enlarge
+				<button class="button button--outline font-size-sm" data-modal-open="modal-1">
+					Enlarge					
 				</button>
 				
 			</div>
@@ -35,44 +52,44 @@
 
 </div>
 
-<div class="modal theme-dark" id="modal-1" role="dialog">
+<div class="modal" id="modal-1" role="dialog">
 
-	<div class="modal__content" aria-labelledby="modal-1-title">
+	<div class="modal__content height-100vh border" aria-labelledby="modal-1-title">
 
-		<header class="modal__content__head display-none">
-			<h2 class="h4" id="modal-1-title">
+		<header class="modal__content__head padding-2 font-size-md">
+
+			<h2 class="screen-reader-only" id="modal-1-title">
 				Modal Title
 			</h2>
-			<button class="button button--icon-only" data-modal-close>
-				<span class="screen-reader-only">Close Modal</span>
-				<span class="fas fa-times"></span>
+
+			<div class="workCanvas-toolbar" id="toolbarDiv">
+				<div class="button-group">
+					<button class="button button--icon-only" id="zoom-in">
+						<span class="nyc_icon_plus" aria-hidden="true" aria-label="Zoom In"></span>
+					</button>
+					<button class="button button--icon-only" id="zoom-out">
+						<span class="nyc_icon_minus" aria-hidden="true" aria-label="Zoom Out"></span>
+					</button>
+					<button class="button button--icon-only" id="home">
+						<span class="nyc_icon_shrink" aria-hidden="true" aria-label="Original Size"></span>
+					</button>
+					<button class="button button--outline" id="full-page">
+						Full Screen
+					</button>
+				</div>
+			</div>
+
+			<button class="button button--icon-only margin-left-auto" aria-label="Close" data-modal-close>
+				<span class="nyc_icon_close" aria-hidden="true"></span>
 			</button>
+		
 		</header>
 
-		<main class="modal__content__body height-100vh border padding-0" id="modal-1-content">
+		<main class="modal__content__body padding-0 height-100 border-top" id="modal-1-content">
 
 			<div class="workCanvas">
 
 				<div class="workCanvas__display" id="openseadragon"></div>
-
-				<div class="workCanvas__toolbar" id="toolbarDiv">
-
-					<div class="button-group font-size-md">
-						<button class="button button--icon-only" aria-label="Zoom In" id="zoom-in">
-							<span class="nyc_icon_plus" aria-hidden="true"></span>
-						</button>
-						<button class="button button--icon-only" aria-label="Zoom Out" id="zoom-out">
-							<span class="nyc_icon_minus" aria-hidden="true"></span>
-						</button>
-						<button class="button button--icon-only" aria-label="Original Size" id="home">
-							<span class="nyc_icon_shrink" aria-hidden="true"></span>
-						</button>
-						<button class="button button--outline" id="full-page">
-							Full Screen
-						</button>
-					</div>
-
-				</div>
 
 			</div>
 
@@ -82,8 +99,6 @@
 	<!-- .modal__content -->
 
 </div>
-<!-- #modal-1 -->
-
 
 {% endblock %}
 

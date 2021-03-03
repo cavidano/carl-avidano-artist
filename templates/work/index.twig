@@ -4,53 +4,26 @@
 
 <div class="border-top border-bottom overflow-hidden">
 
-	<div class="container narrow margin-y-4">
+	{% set category = 'All' %}
 
-		<ul class="nav nav--divider nav--horizontal border sans-serif font-size-sm">
-			<li>
-				<a href="work/drawing">Drawing</a>
-			</li>
-			<li>
-				<a href="work/painting">Painting</a>
-			</li>
-			<li>
-				<a href="work/sketchbook">Sketchbook</a>
-			</li>
-		</ul>
-
-	</div>
+	{{ include('_includes/nav-work.html') }}
 
 	<div class="container medium margin-y-4">
 	
 		<div class="grid grid--gap-3 grid--cells-4--md">
 
+		{% for entry in craft.entries.section('work').all() %}
+
 			<div class="grid__cell">
-				<img src="https://via.placeholder.com/800x800.webp?text=Thumbnail" alt="Placeholder">
+				<a class="display-block" href="{{ entry.url }}">
+					{% for image in entry.workThumbnail.all() %}
+						<img src="{{ image.getUrl('workThumbnail') }}" alt="{{ entry.title }}">
+					{% endfor %}
+				</a>
 			</div>
-			<div class="grid__cell">
-				<img src="https://via.placeholder.com/800x800.webp?text=Thumbnail" alt="Placeholder">
-			</div>
-			<div class="grid__cell">
-				<img src="https://via.placeholder.com/800x800.webp?text=Thumbnail" alt="Placeholder">
-			</div>
-			<div class="grid__cell">
-				<img src="https://via.placeholder.com/800x800.webp?text=Thumbnail" alt="Placeholder">
-			</div>
-			<div class="grid__cell">
-				<img src="https://via.placeholder.com/800x800.webp?text=Thumbnail" alt="Placeholder">
-			</div>
-			<div class="grid__cell">
-				<img src="https://via.placeholder.com/800x800.webp?text=Thumbnail" alt="Placeholder">
-			</div>
-			<div class="grid__cell">
-				<img src="https://via.placeholder.com/800x800.webp?text=Thumbnail" alt="Placeholder">
-			</div>
-			<div class="grid__cell">
-				<img src="https://via.placeholder.com/800x800.webp?text=Thumbnail" alt="Placeholder">
-			</div>
-			<div class="grid__cell">
-				<img src="https://via.placeholder.com/800x800.webp?text=Thumbnail" alt="Placeholder">
-			</div>
+
+		{% endfor %}
+
 		</div>
 
 	</div>

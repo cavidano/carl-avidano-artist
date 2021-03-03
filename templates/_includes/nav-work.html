@@ -1,0 +1,18 @@
+<nav class="container narrow margin-y-4">
+
+    <ul class="nav nav--divider nav--horizontal border sans-serif font-size-sm">
+        <li>
+            <a href="/work" {% if category == 'All' %} aria-current="page" {% endif %}>All</a>
+        </li>
+		<li>
+			<a href="/work/drawing" {% if category == 'Drawing' %} aria-current="page" {% endif %}>Drawing</a>
+		</li>
+		<li>
+			<a href="/work/painting" {% if category == 'Painting' %} aria-current="page" {% endif %}>Painting</a>
+		</li>
+		<li>
+			<a href="/work/sketchbook" {% if category == 'Sketchbook' %} aria-current="page" {% endif %}>Sketchbook</a>
+		</li>
+	</ul>
+
+</nav>
