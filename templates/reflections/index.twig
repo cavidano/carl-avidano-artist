@@ -7,7 +7,7 @@
 	<div class="container medium margin-y-4">
 
 		{% set entryQuery = craft.entries()
-			.section('journal')
+			.section('reflections')
 			.orderBy('postDate desc')
 			.limit(10)
 		%}

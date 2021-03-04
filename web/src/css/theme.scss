@@ -255,6 +255,10 @@ h1, .h1 {
            width: 50%;
         }
 
+        a {
+            text-decoration: underline;
+        }
+
     }
 }
 
@@ -289,7 +293,7 @@ h1, .h1 {
 
 .openseadragon-canvas {
     &:focus, 
-    &:active{
+    &:active {
         outline: none;
     }
 }

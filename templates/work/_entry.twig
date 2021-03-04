@@ -34,14 +34,14 @@
 					<li>
 						<strong>Category:</strong>
 						<span>
-						<a href="{{ category.url }}">
-							{{ category.title }}
-						</a>
+							<a href="{{ category.url }}">
+								{{ category.title }}
+							</a>
 						</span>
 					</li>
 						
 					{% endfor %}
-					
+
 				</ul>
 
 			</div>
@@ -49,14 +49,22 @@
 		</div>
 
 		<div class="grid__cell subtle-fill height-100--lg display-flex">
-			<div class="container narrow padding-y-4 margin-y-auto">
+			<div class="container narrow padding-y-4 margin-y-auto text-align-center">
 
 				{% for image in entry.workImage.all() %}
-					<img class="margin-bottom-3" src="{{ image.getUrl() }}" alt="{{ entry.title }}" id="work-image" data-modal-open="modal-1">
+
+				<img
+					class="margin-bottom-3"
+					src=" {{ image.getUrl() }}"
+					alt=" {{ entry.title }} "
+					id="work-image"
+					data-modal-open="modal-1"
+				>
+				
 				{% endfor %}
 
-				<button class="button button--outline font-size-sm" data-modal-open="modal-1">
-					Enlarge					
+				<button class="sans-serif font-size-sm" data-modal-open="modal-1">
+					View Larger Size					
 				</button>
 				
 			</div>

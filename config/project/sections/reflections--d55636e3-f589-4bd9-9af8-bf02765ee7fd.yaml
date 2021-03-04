@@ -1,11 +1,11 @@
 enableVersioning: true
-handle: journal
-name: Journal
+handle: reflections
+name: Reflections
 propagationMethod: all
 siteSettings:
   57c787ad-978a-4e6c-b80b-40ea855b4233:
     enabledByDefault: true
     hasUrls: true
-    template: journal/_entry
-    uriFormat: 'journal/{slug}'
+    template: reflections/_entry
+    uriFormat: 'reflections/{slug}'
 type: channel

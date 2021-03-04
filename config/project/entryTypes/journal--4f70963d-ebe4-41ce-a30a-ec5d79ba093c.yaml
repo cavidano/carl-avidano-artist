@@ -40,7 +40,7 @@ fieldLayouts:
 handle: journal
 hasTitleField: true
 name: Journal
-section: d55636e3-f589-4bd9-9af8-bf02765ee7fd
+section: d55636e3-f589-4bd9-9af8-bf02765ee7fd # Reflections
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
