@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 377746dc-0283-4f24-ac57-9417416ceaee
+handle: dimensions
+instructions: ''
+name: Dimensions
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

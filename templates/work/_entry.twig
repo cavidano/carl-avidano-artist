@@ -2,32 +2,46 @@
 
 {% block main %}
 
+{# Fetch all of the categories related to this entry #}
+{% set categories = craft.categories.relatedTo(entry).all() %}
+
 <div class="full-height border-top">
 
 	<div class="grid grid--gap-3 grid--cells-6--lg align-items-center--lg height-100--lg">
 
 		<div class="grid__cell">
 			<div class="container narrow padding-y-4">
+
 				<h1>
 					{{ entry.title }}
 				</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati ea ipsum, iusto corrupti commodi reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				</p>
-
+				
+				{{ entry.paragraph }}
+				
 				<ul class="artwork-info">
 					<li>
 						<strong>Medium:</strong>
-						<span>Oil on Canvas</span>
+						<span>{{ entry.medium }}</span>
 					</li> 
 					<li>
 						<strong>Dimensions:</strong>
-						<span>58 x 43 7/8 in</span>
+						<span>{{ entry.dimensions }}</span>
 					</li>
+
+					{# Output them #}
+					{% for category in categories %}
+
 					<li>
 						<strong>Category:</strong>
-						<span>Painting</span>
+						<span>
+						<a href="{{ category.url }}">
+							{{ category.title }}
+						</a>
+						</span>
 					</li>
+						
+					{% endfor %}
+					
 				</ul>
 
 			</div>

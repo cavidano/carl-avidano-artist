@@ -1,4 +1,4 @@
-dateModified: 1614783738
+dateModified: 1614801677
 email:
   fromEmail: cavidano@gmail.com
   fromName: 'Carl Avidano'
@@ -12,7 +12,7 @@ system:
   edition: solo
   live: true
   name: 'Carl Avidano'
-  schemaVersion: 3.6.4
+  schemaVersion: 3.6.6
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

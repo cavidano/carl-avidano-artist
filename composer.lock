@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dffef4a30a949bbf94c86f1a173ae76",
+    "content-hash": "8e373f3b8449963b2ddb3ef1e7e192da",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -308,11 +308,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.6.7",
+            "version": "3.6.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/5ef456281de838d9180c6bfb2f1b8de74268b424",
-                "reference": "5ef456281de838d9180c6bfb2f1b8de74268b424",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/61a3206f209f86f1c1d855bbf8f3a3bdfe73d65c",
+                "reference": "61a3206f209f86f1c1d855bbf8f3a3bdfe73d65c",
                 "shasum": ""
             },
             "require": {
@@ -390,7 +390,7 @@
                 "docs": "https://craftcms.com/docs/3.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2021-02-23T19:50:22+00:00"
+            "time": "2021-03-03T19:27:38+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
