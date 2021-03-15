@@ -6,40 +6,18 @@
 
 	{% set category = 'All' %}
 
-	{{ include('_includes/nav-work.html') }}
+	{{ include('_includes/work-nav.html') }}
 
-	<div class="container medium margin-y-4">
+	<div class="container narrow medium--lg margin-y-4">
 	
-		<div class="grid grid--gap-3 grid--cells-4--md">
+		<div class="grid grid--gap-3 grid--cells-3--md justify-content-center">
 
-		{% for entry in craft.entries.section('work').all() %}
+			{% for entry in craft.entries.section('work').all() %}
+				
+			{{ include('_includes/work-thumbnail.html') }}
 
-			<div class="grid__cell">
-				<a class="display-block" href="{{ entry.url }}">
-					{% for image in entry.workThumbnail.all() %}
-						<img src="{{ image.getUrl('workThumbnail') }}" alt="{{ entry.title }}">
-					{% endfor %}
-				</a>
-			</div>
+			{% endfor %}
 
-		{% endfor %}
-
-		</div>
-
-	</div>
-	
-	<div class="overflow-hidden margin-y-4">
-	
-		<div class="button-group justify-content-center font-size-md" role="menu">
-			<a class="button button--icon-only" href="#1" aria-label="Facebook">
-				<span class="nyc_icon_facebook" aria-hidden="true"></span>
-			</a>
-			<a class="button button--icon-only" href="#1" aria-label="twitter">
-				<span class="nyc_icon_twitter" aria-hidden="true"></span>
-			</a>
-			<a class="button button--icon-only" href="#1" aria-label="twitter">
-				<span class="nyc_icon_mail" aria-hidden="true"></span>
-			</a>
 		</div>
 
 	</div>

@@ -1,0 +1,17 @@
+<div class="grid__cell">
+	<div class="work-thumbnail">
+		<div class="work-thumbnail__image">
+			{% for image in entry.workImage.all() %}
+				<img src="{{ image.getUrl('workThumbnail') }}" alt="{{ entry.title }}">
+			{% endfor %}
+		</div>
+		<div class="work-thumbnail__info">
+			<a class="expanded-link" href="{{ entry.url }}">
+				{{ entry.title }}
+			</a>
+			<p>
+				{{ entry.medium }}
+			</p>
+		</div>
+	</div>
+</div>

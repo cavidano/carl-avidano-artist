@@ -4,7 +4,7 @@
 
 <div class="border-top border-bottom overflow-hidden">
 
-	{{ include('_includes/nav-work.html') }}
+	{{ include('_includes/work-nav.html') }}
 
 	<div class="container medium margin-y-4">
 	
@@ -14,18 +14,12 @@
 
 		<div class="container medium margin-y-4">
 
-			<div class="grid grid--gap-3 grid--cells-4--md justify-content-center">
+			<div class="grid grid--gap-3 grid--cells-3--md justify-content-center">
 
 				{% for entry in craft.entries.section('work').relatedTo(category).all() %}
 
-				<div class="grid__cell">
-					<a class="display-block" href="{{ entry.url }}">
-						{% for image in entry.workThumbnail.all() %}
-							<img src="{{ image.getUrl('workThumbnail') }}" alt="{{ entry.title }}">
-						{% endfor %}
-					</a>
-				</div>
-
+				{{ include('_includes/work-thumbnail.html') }}
+					
 				{% endfor %}
 			
 			</div>
