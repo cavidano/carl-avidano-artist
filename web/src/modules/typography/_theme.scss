@@ -18,7 +18,7 @@
 
     // Fonts
 
-    --body-font-family: "adobe-garamond-pro";
+    --body-font-family: "neue-haas-unica";
     --body-font-size: 24px;
     --body-line-height: 1.25;
 
@@ -32,8 +32,8 @@
 
     // Colors
 
-    --banner-headline-font-size: calc(var(--body-font-size) * 2.75);  // 
-    --banner-headline-font-weight: var(--body-font-weight-normal);
+    --banner-headline-font-size: calc(var(--body-font-size) * 4);  // 
+    --banner-headline-font-weight: 900;
 
     --h1-font-size: calc(var(--body-font-size) * 2.3);      // 60px
     --h2-font-size: calc(var(--body-font-size) * 2.2);      // 44px
@@ -42,7 +42,7 @@
     --h5-font-size: calc(var(--body-font-size) * 1.4);      // 24px
     --h6-font-size: calc(var(--body-font-size) * 1.1);      // 22px
 
-    --header-line-height: 1.25;
+    --header-line-height: 1;
 }
 
 body {
@@ -51,4 +51,10 @@ body {
 
 .backdrop--fixed {
     --backdrop-fixed-height: 100%;
+}
+
+// Assign Serif Font
+
+p:not([class]){
+    font-family: "adobe-garamond-pro", serif;
 }

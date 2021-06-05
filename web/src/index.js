@@ -19,6 +19,8 @@ new Accordion();
 import Alerts from "./modules/alerts";
 new Alerts();
 
+import "./modules/artwork";
+
 import "./modules/article";
 
 import "./modules/aspect-ratios";

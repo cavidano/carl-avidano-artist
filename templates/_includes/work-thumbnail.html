@@ -1,5 +1,5 @@
 <div class="grid__cell">
-	<div class="work-thumbnail">
+	<div class="work-thumbnail subtle-fill">
 		<div class="work-thumbnail__image">
 			{% for image in entry.workImage.all() %}
 				<img src="{{ image.getUrl('workThumbnail') }}" alt="{{ entry.title }}">

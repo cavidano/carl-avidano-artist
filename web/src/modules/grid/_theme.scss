@@ -1,0 +1,51 @@
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "../breakpoints/style" as breakpoints;
+@use "../spacing/style" as spacing;
+
+// Introduction
+
+#introduction {
+    display: grid;
+
+    > * {
+        overflow: hidden;
+    }
+
+    .backdrop--fixed {
+        height: 100%;
+    }
+    
+    // Mobile
+
+    grid-template-areas: 
+        "one"
+        "two"
+        "three";
+
+    > .one {
+        grid-area: one;
+    }
+
+    > .two {
+        grid-area: two;
+    }
+
+    > .three {
+        grid-area: three;
+    }
+
+    // Desktop
+
+    @media (min-width: breakpoints.$bp-lg) {
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "one  one"
+            "two three";
+    }
+
+}

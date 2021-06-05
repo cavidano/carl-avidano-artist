@@ -1,6 +1,6 @@
 module.exports = {
     entry: {
-        nyc_core: [
+        carl_avidano: [
             './src/index.js'
         ]
     }

@@ -44,6 +44,7 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
     --body-font-weight-normal: 400;
     --body-font-weight-medium: 600;
     --body-font-weight-bold: 700;
+    --body-font-weight-black: 900;
 
     --body-font-size: 22px;
     --body-line-height: 1.5;
@@ -59,7 +60,7 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
     // Banner Headline
 
     --banner-headline-font-size: calc(var(--body-font-size) * 3.8);
-    --banner-headline-font-weight: var(--body-font-weight-normal);
+    --banner-headline-font-weight: var(--body-font-weight-black);
 
     // Headers
 
@@ -81,6 +82,7 @@ $font-weights: (
     normal: var(--body-font-weight-normal),
     medium: var(--body-font-weight-medium),
     bold: var(--body-font-weight-bold),
+    black: var(--body-font-weight-black),
 );
 
 @each $key, $value in $font-weights {
