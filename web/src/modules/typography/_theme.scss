@@ -1,0 +1,54 @@
+
+//////////////////////////////////////////////
+// B. Custom Properties
+//////////////////////////////////////////////
+
+:root {
+
+    // Colors
+
+    --primary: #e32831;
+    --dark: #000000;
+    --light: #fff1e5;
+
+    --primary-text: white;
+    --light-text: #40362d;
+
+    --a11y-link-color: currentColor;
+
+    // Fonts
+
+    --body-font-family: "adobe-garamond-pro";
+    --body-font-size: 24px;
+    --body-line-height: 1.25;
+
+    // Font Sizes
+
+    --font-size-sm: calc(var(--body-font-size) * 0.6);      // ~ 18px
+    --font-size-md: calc(var(--body-font-size) * 0.75);     // ~ 18px
+    --font-size-rg: calc(var(--body-font-size) * 1);        // = 22px
+    --font-size-lg: calc(var(--body-font-size) * 1.25);     // ~ 26px
+    --font-size-xl: calc(var(--body-font-size) * 1.5);      // ~ 30px
+
+    // Colors
+
+    --banner-headline-font-size: calc(var(--body-font-size) * 2.75);  // 
+    --banner-headline-font-weight: var(--body-font-weight-normal);
+
+    --h1-font-size: calc(var(--body-font-size) * 2.3);      // 60px
+    --h2-font-size: calc(var(--body-font-size) * 2.2);      // 44px
+    --h3-font-size: calc(var(--body-font-size) * 1.8);
+    --h4-font-size: calc(var(--body-font-size) * 1.6);
+    --h5-font-size: calc(var(--body-font-size) * 1.4);      // 24px
+    --h6-font-size: calc(var(--body-font-size) * 1.1);      // 22px
+
+    --header-line-height: 1.25;
+}
+
+body {
+    --body-max-width: 100%;
+}
+
+.backdrop--fixed {
+    --backdrop-fixed-height: 100%;
+}

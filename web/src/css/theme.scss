@@ -103,28 +103,6 @@ h1, .h1 {
     font-weight: normal;
 }
 
-// Subtle Fill
-
-.subtle-fill {
-    position: relative;
-
-     &::before {
-        position: absolute;
-        content: "";
-        
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        border-radius: inherit;
-        pointer-events: none;
-
-        background-color: currentColor;
-        opacity: var(--button-faint-fill-opacity);
-    }
-}
-
 // Theme Color Buttons
 
 #theme-buttons {
