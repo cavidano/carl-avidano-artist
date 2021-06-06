@@ -2,96 +2,67 @@
 
 {% block main %}
 
-<article>
+	<article>
 
-	<div class="backdrop backdrop--fixed full-height" id="article-introduction">
+		<div class="backdrop backdrop--fixed full-height" id="article-introduction">
 
-		<div class="backdrop__image">
-			<img class="opacity-30" src="./images/backdrop-example-03.jpg" alt="Placeholder">
-		</div>
+			<div class="backdrop__image">
+				<img class="opacity-70" src="/dist/images/backdrop-example-03.jpg" alt="Placeholder">
+			</div>
 
-		<div class="backdrop__cover">
+			<div class="backdrop__cover">
 
-			<div class="container medium text-align-center margin-y-5">
+				<div class="container medium text-align-center margin-y-5">
 
-				<h1 class="screen-reader-only">
-					{{ entry.header }}
-				</h1>
+					<h1 class="screen-reader-only">
+						{{ entry.header }}
+					</h1>
 
-				<div class="banner-headline">
-					{{ entry.paragraph }}
+					<div class="banner-headline">
+						{{ entry.paragraph }}
+					</div>
+
+					<a href="#bio" class="button theme-dark margin-y-4">
+						{{ entry.linkText }}
+					</a>
+
 				</div>
-
-				<a href="#cool" class="button button--outline margin-y-4">
-					{{ entry.linkText }}
-				</a>
 
 			</div>
 
 		</div>
+		<!-- .backdrop -->
 
-	</div>
-	<!-- .backdrop -->
+		<div class="overflow-hidden" id="bio">
 
-	<div class="overflow-hidden" id="cool">
+			<section>
 
-		<div class="container narrow margin-y-5">
+				<div class="container narrow margin-y-5">
+				
+					<h2>Artist Statement</h2>
 
-			<h2>Statement</h2>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.
+					</p>
 
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-				                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint harum
-				                        dignissimos accusamus reiciendis sit? Quam earum quaerat tempora fugiat. Sequi
-				                        suscipit voluptas
-				<a href="#1">obcaecati repellendus</a>.
-			</p>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.
+					</p>
+					
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.
+					</p>
 
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-				                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint harum
-				                        dignissimos accusamus reiciendis sit? Quam earum quaerat tempora fugiat. Sequi
-				                        suscipit voluptas obcaecati repellendus.
-			</p>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.
+					</p>
 
-			<h3>Lorem ipsum dolor</h3>
-
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-				                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint harum
-				                        dignissimos accusamus reiciendis sit? Quam earum quaerat tempora fugiat. Sequi
-				                        suscipit voluptas obcaecati repellendus.
-			</p>
-
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-				                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint harum
-				                        dignissimos accusamus reiciendis sit? Quam earum quaerat tempora fugiat. Sequi
-				                        suscipit voluptas obcaecati repellendus.
-			</p>
-
-			<ul>
-				<li>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore commodi,
-					                            recusandae accusantium pariatur, voluptate ab ullam a sed, nesciunt minus
-					                            aut similique dolorem repudiandae.
-				</li>
-				<li>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore commodi,
-					                            recusandae accusantium pariatur, voluptate ab ullam a sed, nesciunt minus
-					                            aut similique dolorem repudiandae.
-				</li>
-				<li>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore commodi,
-					                            recusandae accusantium pariatur, voluptate ab ullam a sed, nesciunt minus
-					                            aut similique dolorem repudiandae.
-				</li>
-			</ul>
+				</div>
+				
+			</section>
 
 		</div>
 
-	</div>
-
-</article>
+	</article>
 
 {% endblock %}

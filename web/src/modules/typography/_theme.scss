@@ -2,7 +2,7 @@
 
 In this file:
 
-// A. Modules
+// A. Custom Properties
 // B. Variables
 // C. Font Weight Utilities
 // D. Font Size Utilities
@@ -16,11 +16,7 @@ In this file:
 */
 
 //////////////////////////////////////////////
-// A. Modules
-//////////////////////////////////////////////
-
-//////////////////////////////////////////////
-// B. Custom Properties
+// A. Custom Properties
 //////////////////////////////////////////////
 
 :root {
@@ -39,7 +35,7 @@ In this file:
     // Fonts
 
     --body-font-family: "neue-haas-unica";
-    --body-font-size: 24px;
+    --body-font-size: 22px;
     --body-line-height: 1.25;
 
     // Font Sizes
@@ -71,10 +67,4 @@ body {
 
 .backdrop--fixed {
     --backdrop-fixed-height: 100%;
-}
-
-// Assign Serif Font
-
-p:not([class]){
-    font-family: "adobe-garamond-pro", serif;
 }

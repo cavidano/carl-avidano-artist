@@ -2,125 +2,119 @@
 
 {% block main %}
 
-{# Fetch all of the categories related to this entry #}
-{% set categories = craft.categories.relatedTo(entry).all() %}
+	{# Fetch all of the categories related to this entry #}
+	{% set categories = craft.categories.relatedTo(entry).all() %}
 
-<div class="full-height border-top">
+	<div class="full-height border-top">
 
-	<div class="grid grid--gap-3 grid--cells-6--lg align-items-center--lg height-100--lg">
+		<div class="grid grid--gap-3 grid--cells-6--lg align-items-center--lg height-100--lg">
 
-		<div class="grid__cell">
-			<div class="container narrow padding-y-4">
+			<div class="grid__cell">
+				<div class="container narrow padding-y-4">
 
-				<h1>
-					{{ entry.title }}
-				</h1>
-				
-				{{ entry.paragraph }}
-				
-				<ul class="artwork-info">
-					<li>
-						<strong>Medium:</strong>
-						<span>{{ entry.medium }}</span>
-					</li> 
-					<li>
-						<strong>Dimensions:</strong>
-						<span>{{ entry.dimensions }}</span>
-					</li>
+					<h1 class="h2">
+						{{ entry.title }}
+					</h1>
 
-					{# Output them #}
-					{% for category in categories %}
+					{{ entry.paragraph }}
 
-					<li>
-						<strong>Category:</strong>
-						<span>
-							<a href="{{ category.url }}">
-								{{ category.title }}
-							</a>
-						</span>
-					</li>
-						
+					<ul class="list-divider font-size-md">
+						<li>
+							<strong class="list-divider__cell">Medium:</strong>
+							<span class="list-divider__cell">{{ entry.medium }}</span>
+						</li>
+						<li>
+							<strong class="list-divider__cell">Dimensions:</strong>
+							<span class="list-divider__cell">{{ entry.dimensions }}</span>
+						</li>
+
+						{# Output them #}
+						{% for category in categories %}
+
+							<li>
+								<strong class="list-divider__cell">Category:</strong>
+								<span class="list-divider__cell">
+									<a href="{{ category.url }}">
+										{{ category.title }}
+									</a>
+								</span>
+							</li>
+
+						{% endfor %}
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="grid__cell subtle-fill height-100--lg display-flex">
+				<div class="container narrow padding-y-4 margin-y-auto text-align-center">
+
+					{% for image in entry.workImage.all() %}
+
+						<img class="margin-bottom-3" src=" {{ image.getUrl() }}" alt=" {{ entry.title }} " id="work-image" data-modal-open="modal-1">
+
 					{% endfor %}
 
-				</ul>
-
-			</div>
-
-		</div>
-
-		<div class="grid__cell subtle-fill height-100--lg display-flex">
-			<div class="container narrow padding-y-4 margin-y-auto text-align-center">
-
-				{% for image in entry.workImage.all() %}
-
-				<img
-					class="margin-bottom-3"
-					src=" {{ image.getUrl() }}"
-					alt=" {{ entry.title }} "
-					id="work-image"
-					data-modal-open="modal-1"
-				>
-				
-				{% endfor %}
-
-				<button class="sans-serif font-size-sm" data-modal-open="modal-1">
-					View Larger Size					
-				</button>
-				
-			</div>
-		</div>
-
-	</div>
-
-</div>
-
-<div class="modal" id="modal-1" role="dialog">
-
-	<div class="modal__content height-100vh border" aria-labelledby="modal-1-title">
-
-		<header class="modal__content__head padding-2 font-size-md">
-
-			<h2 class="screen-reader-only" id="modal-1-title">
-				Modal Title
-			</h2>
-
-			<div class="workCanvas-toolbar" id="toolbarDiv">
-				<div class="button-group">
-					<button class="button button--icon-only" id="zoom-in">
-						<span class="icon_plus" aria-hidden="true" aria-label="Zoom In"></span>
+					<button class="sans-serif font-size-sm" data-modal-open="modal-1">
+						View Larger Size
 					</button>
-					<button class="button button--icon-only" id="zoom-out">
-						<span class="icon_minus" aria-hidden="true" aria-label="Zoom Out"></span>
-					</button>
-					<button class="button button--icon-only" id="home">
-						<span class="icon_shrink" aria-hidden="true" aria-label="Original Size"></span>
-					</button>
-					<button class="button button--outline" id="full-page">
-						Full Screen
-					</button>
+
 				</div>
 			</div>
 
-			<button class="button button--icon-only margin-left-auto" aria-label="Close" data-modal-close>
-				<span class="icon_close" aria-hidden="true"></span>
-			</button>
-		
-		</header>
-
-		<main class="modal__content__body padding-0 height-100 border-top" id="modal-1-content">
-
-			<div class="workCanvas">
-
-				<div class="workCanvas__display" id="openseadragon"></div>
-
-			</div>
-
-		</main>
+		</div>
 
 	</div>
-	<!-- .modal__content -->
 
-</div>
+	<div class="modal padding-3" id="modal-1" role="dialog">
+
+		<div class="modal__content height-100vh border" aria-labelledby="modal-1-title">
+
+			<header class="modal__content__head padding-2 font-size-md">
+
+				<h2 class="screen-reader-only" id="modal-1-title">
+					Modal Title
+				</h2>
+
+				<div class="workCanvas-toolbar" id="toolbarDiv">
+					<div class="button-group">
+						<button class="button button--icon-only" id="zoom-in">
+							<span class="nyc_icon_plus" aria-hidden="true" aria-label="Zoom In"></span>
+						</button>
+						<button class="button button--icon-only" id="zoom-out">
+							<span class="nyc_icon_minus" aria-hidden="true" aria-label="Zoom Out"></span>
+						</button>
+						<button class="button button--icon-only" id="home">
+							<span class="nyc_icon_shrink" aria-hidden="true" aria-label="Original Size"></span>
+						</button>
+						<button class="button button--outline" id="full-page">
+							Full Screen
+						</button>
+					</div>
+				</div>
+
+				<button class="button button--icon-only margin-left-auto" aria-label="Close" data-modal-close>
+					<span class="nyc_icon_close" aria-hidden="true"></span>
+				</button>
+
+			</header>
+
+			<main class="modal__content__body padding-0 height-100 border-top" id="modal-1-content">
+
+				<div class="workCanvas subtle-fill">
+
+					<div class="workCanvas__display" id="openseadragon"></div>
+
+				</div>
+
+			</main>
+
+		</div>
+		<!-- .modal__content -->
+
+	</div>
 
 {% endblock %}
 
@@ -130,7 +124,7 @@
 
 {% js %}
 
-	const coolURL = document.getElementById("work-image").src;
+const coolURL = document.getElementById("work-image").src;
 
 	console.log(coolURL);
 

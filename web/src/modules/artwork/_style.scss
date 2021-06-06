@@ -20,52 +20,65 @@ In this file:
 @use "../breakpoints/style" as breakpoints;
 @use "../accents/style" as accents;
 
+//////////////////////////////////////////////
+// B. Work Thumbnail
+//////////////////////////////////////////////
 
-// Work Image Zoom
+.work-thumbnail {
+    position: relative;
+    overflow: hidden;
 
-.date-and-byline {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+
+    height: 100%;
+
+    text-align: center;
+
+    &:hover, 
+    &:focus, 
+    &:active {
+        * { 
+            text-decoration: none;
+        }
+    }
+}
+
+.work-thumbnail__image,
+.work-thumbnail__info {
+    padding-left: var(--spacer-2);
+    padding-right: var(--spacer-2);
+}
+
+.work-thumbnail__image {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+
+    padding-top: var(--spacer-2);
+    padding-bottom: var(--spacer-2);
+
+    img {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+.work-thumbnail__info {
+    padding-bottom: var(--spacer-2);
+
+    a {
+        font-weight: var(--body-font-weight-bold);
+        font-family: var(--body-font-family);
+        font-size: var(--font-size-md);
+    }
     
-    margin-left: calc(var(--spacer-2) * -1);
-    margin-right: calc(var(--spacer-2) * -1);
-
-    > span {
-        margin-right: var(--spacer-2);
-        margin-left: var(--spacer-2);
+    p {
+        font-size: var(--font-size-sm);
+        opacity: 0.7;
     }
+
 }
-
-// Work Image Zoom
-
-.artwork-info {
-
-    list-style: none;
-    font-size: var(--font-size-md);
-
-    li {
-        display: flex;
-        
-        padding-top: var(--spacer-2);
-        padding-bottom: var(--spacer-2);
-
-        &:not(:first-child) {
-            border-top-width: var(--default-border-width);
-            border-top-style: var(--default-border-style);
-            border-top-color: inherit;
-        }
-
-        > * {
-           width: 50%;
-        }
-
-        a {
-            text-decoration: underline;
-        }
-
-    }
-}
-
 // Work Image Zoom
 
 .workCanvas-toolbar {
@@ -100,58 +113,4 @@ In this file:
     &:active {
         outline: none;
     }
-}
-
-.work-thumbnail {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-
-    &:hover, 
-    &:focus, 
-    &:active {
-        * { text-decoration: none;
-    }
-
-    }
-}
-
-.work-thumbnail__image,
-.work-thumbnail__info {
-    padding-left: var(--spacer-3);
-    padding-right: var(--spacer-3);
-}
-
-.work-thumbnail__image {
-    position: relative;
-    display: flex;
-    flex-grow: 1;
-
-    padding-top: var(--spacer-3);
-    padding-bottom: var(--spacer-3);
-
-    img {
-        margin-top: auto;
-        margin-bottom: auto;
-
-    }
-}
-
-.work-thumbnail__info {
-    padding-bottom: var(--spacer-3);
-
-    a {
-        font-weight: normal;
-        font-family: var(--body-font-family);
-        font-size: var(--font-size-md);
-    }
-    
-    p {
-        font-size: var(--font-size-sm);
-        opacity: 0.7;
-    }
-
 }

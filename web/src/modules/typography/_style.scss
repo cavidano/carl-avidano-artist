@@ -46,8 +46,8 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
     --body-font-weight-bold: 700;
     --body-font-weight-black: 900;
 
-    --body-font-size: 20px;
-    --body-line-height: 1.5;
+    --body-font-size: 22px;
+    --body-line-height: 1.6;
 
     // Font Sizes
 
@@ -344,4 +344,38 @@ address {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+//////////////////////////////////////////////
+// K. List Divider
+//////////////////////////////////////////////
+
+.list-divider { 
+    list-style: none;
+    padding: unset;
+
+    > li {
+        display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        margin: unset;
+    }
+    
+    > li:not(:last-child) {
+        border-bottom-width: var(--default-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: inherit;
+    }
+
+}
+
+.list-divider__cell {
+    width: 50%;
+
+    padding-top: var(--spacer-2);
+    padding-bottom: var(--spacer-2);
+
+    a {
+        text-decoration: underline;
+    }
 }
