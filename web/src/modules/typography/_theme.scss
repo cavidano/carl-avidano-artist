@@ -3,15 +3,6 @@
 In this file:
 
 // A. Custom Properties
-// B. Variables
-// C. Font Weight Utilities
-// D. Font Size Utilities
-// E. Headers
-// F. Body Selectors
-// G. Last Child Margin Bottom
-// H. Text Align Utilities
-// I. Word Wrap Utilities
-// J. Truncate Text
 
 */
 
@@ -36,7 +27,7 @@ In this file:
 
     --body-font-family: "neue-haas-unica";
     --body-font-size: 22px;
-    --body-line-height: 1.25;
+    --body-line-height: 1.4;
 
     // Font Sizes
 
@@ -51,12 +42,12 @@ In this file:
     --banner-headline-font-size: calc(var(--body-font-size) * 4);  // 
     --banner-headline-font-weight: 900;
 
-    --h1-font-size: calc(var(--body-font-size) * 2.3);      // 60px
-    --h2-font-size: calc(var(--body-font-size) * 2.2);      // 44px
-    --h3-font-size: calc(var(--body-font-size) * 1.8);
-    --h4-font-size: calc(var(--body-font-size) * 1.6);
-    --h5-font-size: calc(var(--body-font-size) * 1.4);      // 24px
-    --h6-font-size: calc(var(--body-font-size) * 1.1);      // 22px
+    --h1-font-size: calc(var(--body-font-size) * 2.25);      // 60px
+    --h2-font-size: calc(var(--body-font-size) * 2);      // 44px
+    --h3-font-size: calc(var(--body-font-size) * 1.75);
+    --h4-font-size: calc(var(--body-font-size) * 1.5);
+    --h5-font-size: calc(var(--body-font-size) * 1.25);      // 24px
+    --h6-font-size: calc(var(--body-font-size) * 1.125);      // 22px
 
     --header-line-height: 1;
 }
