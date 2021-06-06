@@ -40,6 +40,8 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-react-app": "^3.1.2",
     "core-js": "^3.6.5",
     "custom-event-polyfill": "^1.0.7",
     "element-closest-polyfill": "^1.0.2",
