@@ -190,7 +190,8 @@ $headers: (
 
 .banner-headline {
     font-weight: var(--banner-headline-font-weight);
-
+    font-size: calc(var(--banner-headline-font-size) * 0.5);
+    
     @include breakpoints.breakpoints-up(lg){
         font-size: var(--banner-headline-font-size);
     }
