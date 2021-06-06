@@ -41,7 +41,7 @@
     // Desktop
 
     @media (min-width: breakpoints.$bp-lg) {
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: 1.75fr 1.25fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
             "one  one"
