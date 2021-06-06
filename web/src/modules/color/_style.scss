@@ -45,11 +45,11 @@ In this file:
 
     // Associated Secondary Colors
 
-    --secondary-text: var(--dark);
-    --secondary-border: hsla(0, 0%, 0%, 0.25);
-    --secondary-link: currentColor;
-    --secondary-confirm: #41e0f2;
-    --secondary-warn: #ffa3a4;
+    // --secondary-text: var(--dark);
+    // --secondary-border: hsla(0, 0%, 0%, 0.25);
+    // --secondary-link: currentColor;
+    // --secondary-confirm: #41e0f2;
+    // --secondary-warn: #ffa3a4;
 
     // Associated Dark Colors
 
@@ -61,13 +61,13 @@ In this file:
 
     // Associated Light Colors
 
-    --light-text: var(--dark);
-    --light-border: hsla(0, 0%, 50%, 0.25);
-    --light-link: var(--a11y-link-color);
-    --light-confirm: #007e35;
-    --light-warn: #ce1736;
+    // --light-text: var(--dark);
+    // --light-border: hsla(0, 0%, 50%, 0.25);
+    // --light-link: var(--a11y-link-color);
+    // --light-confirm: #007e35;
+    // --light-warn: #ce1736;
 
-    // Associated Light Colors
+    // Associated White Colors
 
     --white-text: var(--dark);
     --white-border: hsla(0, 0%, 50%, 0.25);
@@ -96,14 +96,14 @@ $theme-colors: (
         warn: var(--primary-warn)
     ), 
     
-    "secondary": (
-        swatch: var(--secondary),
-        text: var(--secondary-text),
-        border: var(--secondary-border),
-        link: var(--secondary-link),
-        confirm: var(--secondary-confirm),
-        warn: var(--secondary-warn)
-    ), 
+    // "secondary": (
+    //     swatch: var(--secondary),
+    //     text: var(--secondary-text),
+    //     border: var(--secondary-border),
+    //     link: var(--secondary-link),
+    //     confirm: var(--secondary-confirm),
+    //     warn: var(--secondary-warn)
+    // ), 
     
     "dark": (
         swatch: var(--dark),
@@ -112,16 +112,16 @@ $theme-colors: (
         link: var(--dark-link),
         confirm: var(--dark-confirm),
         warn: var(--dark-warn)
-    ), 
-    
-    "light": (
-        swatch: var(--light),
-        text: var(--light-text),
-        border: var(--light-border),
-        link: var(--light-link),
-        confirm: var(--light-confirm),
-        warn: var(--light-warn)
     )
+    
+    // "light": (
+    //     swatch: var(--light),
+    //     text: var(--light-text),
+    //     border: var(--light-border),
+    //     link: var(--light-link),
+    //     confirm: var(--light-confirm),
+    //     warn: var(--light-warn)
+    // )
 );
 
 //////////////////////////////////////////////
