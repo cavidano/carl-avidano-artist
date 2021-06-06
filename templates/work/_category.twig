@@ -5,27 +5,22 @@
 <div class="border-top border-bottom overflow-hidden">
 
 	{{ include('_includes/work-nav.html') }}
-
-	<div class="container medium margin-y-4">
 	
-		<h1 class="screen-reader-only">
-			{{ category.title }}
-		</h1>
+	<h1 class="screen-reader-only">
+		{{ category.title }}
+	</h1>
 
-		<div class="container narrow wide--lg margin-y-4">
+	<div class="container narrow wide--lg margin-y-4">
 
-			<div class="grid grid--gap-3 grid--cells-3--md justify-content-center">
+		<div class="grid grid--gap-2 grid--cells-6--sm grid--cells-3--lg justify-content-center">
 
-				{% for entry in craft.entries.section('work').relatedTo(category).all() %}
+			{% for entry in craft.entries.section('work').relatedTo(category).all() %}
 
-				{{ include('_includes/work-thumbnail.html') }}
-					
-				{% endfor %}
-			
-			</div>
-
+			{{ include('_includes/work-thumbnail.html') }}
+				
+			{% endfor %}
+		
 		</div>
-
 
 	</div>
 

@@ -7,7 +7,23 @@
 
 	<div class="full-height border-top">
 
-		<div class="grid grid--gap-3 grid--cells-6--lg align-items-center--lg height-100--lg">
+		<div class="grid grid--cells-6--lg align-items-center--lg row-reverse--lg height-100--lg">
+
+			<div class="grid__cell subtle-fill height-100--lg display-flex">
+				<div class="container narrow padding-y-4 margin-y-auto text-align-center">
+
+					{% for image in entry.workImage.all() %}
+
+						<img class="margin-bottom-3" src=" {{ image.getUrl() }}" alt=" {{ entry.title }} " id="work-image" data-modal-open="modal-1">
+
+					{% endfor %}
+
+					<button class="sans-serif font-size-sm" data-modal-open="modal-1">
+						View Larger Size
+					</button>
+
+				</div>
+			</div>
 
 			<div class="grid__cell">
 				<div class="container narrow padding-y-4">
@@ -49,22 +65,6 @@
 
 				</div>
 
-			</div>
-
-			<div class="grid__cell subtle-fill height-100--lg display-flex">
-				<div class="container narrow padding-y-4 margin-y-auto text-align-center">
-
-					{% for image in entry.workImage.all() %}
-
-						<img class="margin-bottom-3" src=" {{ image.getUrl() }}" alt=" {{ entry.title }} " id="work-image" data-modal-open="modal-1">
-
-					{% endfor %}
-
-					<button class="sans-serif font-size-sm" data-modal-open="modal-1">
-						View Larger Size
-					</button>
-
-				</div>
 			</div>
 
 		</div>
