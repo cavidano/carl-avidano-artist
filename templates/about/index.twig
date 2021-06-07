@@ -8,15 +8,13 @@
 
 			<div class="backdrop__image">
 
-				{% for asset in entry.image.all() %}
+				{% set image = entry.image.one() %}
 
-					{% if asset.url %}
-						<img src="{{ asset.url }}" alt="{{ asset.title }}">
-					{% else %}
-						<img src="https://via.placeholder.com/1000x750/" alt="Placeholder">
-					{% endif %}
-
-				{% endfor %}
+				{% if image %}
+					<img src="{{ image.url }}" alt="{{ image.title }}">
+				{% else %}
+					<img src="https://via.placeholder.com/1000x750/" alt="Placeholder">
+				{% endif %}
 
 			</div>
 
