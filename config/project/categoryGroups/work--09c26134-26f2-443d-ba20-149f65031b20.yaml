@@ -31,7 +31,7 @@ fieldLayouts:
 handle: work
 name: Work
 siteSettings:
-  57c787ad-978a-4e6c-b80b-40ea855b4233:
+  57c787ad-978a-4e6c-b80b-40ea855b4233: # Carl Avidano • Artist
     hasUrls: true
     template: work/_category
     uriFormat: 'work/{slug}'
