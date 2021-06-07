@@ -40,7 +40,8 @@ import "./modules/cards";
 import Collapse from "./modules/collapse";
 new Collapse();
 
-import "./modules/color";
+import Color from "./modules/color";
+new Color();
 
 import "./modules/containers";
 
@@ -53,6 +54,9 @@ import "./modules/flex";
 
 import Forms from "./modules/forms";
 new Forms();
+
+import FullHeight from "./modules/full-height";
+new FullHeight();
 
 import "./modules/grid";
 

@@ -1,0 +1,23 @@
+/*
+
+In this file:
+
+// A. Theme Mode
+
+*/
+
+:root {
+    --backdrop-image-opacity: 0.7;
+}
+
+.backdrop__image img {
+    opacity: var(--backdrop-image-opacity);
+}
+
+//////////////////////////////////////////////
+// A. Theme Mode 
+//////////////////////////////////////////////
+
+body.theme-dark {
+    --backdrop-image-opacity: 0.5;
+}
