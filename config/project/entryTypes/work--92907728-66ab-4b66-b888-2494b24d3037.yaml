@@ -54,7 +54,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: ac1b314d-2ffd-4e34-9895-fd594578fea6
+            fieldUid: ac1b314d-2ffd-4e34-9895-fd594578fea6 # Medium
             instructions: null
             label: null
             required: false
