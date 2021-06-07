@@ -28,13 +28,13 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: journal
+handle: Article
 hasUrls: true
-name: Journal
+name: Article
 settings:
-  path: '@webroot/images/uploads/journal'
-sortOrder: 4
+  path: '@webroot/images/uploads/article'
+sortOrder: 0
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local
-url: '@web/images/'
+url: '@web/images/uploads/article'

@@ -35,29 +35,46 @@
 
 		<div class="overflow-hidden" id="bio">
 
-			<section>
+			<section
+				class="margin-y-5">
 
-				<div class="container narrow margin-y-5">
+				{# Put matrix here #}
 
-					<h2>Artist's statement</h2>
+				{% set blocks = entry.articleMatrix.all() %}
 
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.
-					</p>
+				{% for block in blocks %}
 
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.
-					</p>
+					{% switch block.type %}
 
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.
-					</p>
+						{% case "textBlock" %}
+							<div class="container narrow margin-y-4">
+								{{ block.text }}
+							</div>
 
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum consequuntur ratione aliquid velit veritatis expedita quibusdam praesentium dolorum nihil illo.
-					</p>
+						{% case "figureBlock" %}
 
-				</div>
+							{% set width = block.width %}
+							{% set image = block.image[0] %}
+
+							<figure class="container {{ width }} margin-y-4">
+								<img src="{{ image.url() }}" alt="{{ block.altText }}"/>
+								{% if block.caption %}
+									<figcaption class="caption">
+										<small>{{ block.caption }}</small>
+									</figcaption>
+								{% endif %}
+							</figure>
+
+						{% case "divider" %}
+							<hr class="margin-y-5" id="{{ block.idAttribute }}"/>
+
+						{% default %}
+							<p>A font walks into a bar.</p>
+							<p>The bartender says, “Hey, we don’t serve your type in here!”</p>
+
+					{% endswitch %}
+
+				{% endfor %}
 
 			</section>
 

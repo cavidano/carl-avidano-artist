@@ -1,11 +1,11 @@
-field: 29525e15-70a8-48af-bc18-54de59c31a54
+field: 29525e15-70a8-48af-bc18-54de59c31a54 # Article Matrix
 fieldLayouts:
   eec83b62-f125-4635-99f2-e098f23fedef:
     tabs:
       -
         elements:
           -
-            fieldUid: 35eb0a1a-285c-4f4e-bd8c-04915767282a
+            fieldUid: 35eb0a1a-285c-4f4e-bd8c-04915767282a # Text
             instructions: null
             label: null
             required: false
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  35eb0a1a-285c-4f4e-bd8c-04915767282a:
+  35eb0a1a-285c-4f4e-bd8c-04915767282a: # Text
     contentColumnType: text
     fieldGroup: null
     handle: text

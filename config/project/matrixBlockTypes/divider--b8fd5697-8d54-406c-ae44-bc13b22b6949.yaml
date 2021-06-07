@@ -1,0 +1,40 @@
+field: 29525e15-70a8-48af-bc18-54de59c31a54 # Article Matrix
+fieldLayouts:
+  3db5b923-5d4f-4f1a-8ed3-9c30ef9e5670:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: e0e83cae-e638-45eb-983f-a5e332a19c54 # ID Attribute
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  e0e83cae-e638-45eb-983f-a5e332a19c54: # ID Attribute
+    contentColumnType: text
+    fieldGroup: null
+    handle: idAttribute
+    instructions: ''
+    name: 'ID Attribute'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: divider
+name: Divider
+sortOrder: 3

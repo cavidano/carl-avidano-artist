@@ -1,11 +1,11 @@
-field: 29525e15-70a8-48af-bc18-54de59c31a54
+field: 29525e15-70a8-48af-bc18-54de59c31a54 # Article Matrix
 fieldLayouts:
   d547eee8-dfc7-4b5d-bea6-873f8d640520:
     tabs:
       -
         elements:
           -
-            fieldUid: d9af5eef-972e-40fe-b136-912375d86583
+            fieldUid: d9af5eef-972e-40fe-b136-912375d86583 # Width
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3bb44516-8e5d-4398-9bcd-19a602f9951f
+            fieldUid: 3bb44516-8e5d-4398-9bcd-19a602f9951f # Image
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6f1fb9ef-5294-479e-87ac-396a95a1f470
+            fieldUid: 6f1fb9ef-5294-479e-87ac-396a95a1f470 # Alt Text
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d804885f-afb4-4970-bbb7-0af5a1e30226
+            fieldUid: d804885f-afb4-4970-bbb7-0af5a1e30226 # Caption
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  3bb44516-8e5d-4398-9bcd-19a602f9951f:
+  3bb44516-8e5d-4398-9bcd-19a602f9951f: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -54,7 +54,7 @@ fields:
       allowSelfRelations: false
       allowUploads: true
       allowedKinds: null
-      defaultUploadLocationSource: 'volume:9da668f2-c1d0-4ac1-a085-88ff46ea8b0a'
+      defaultUploadLocationSource: 'volume:9da668f2-c1d0-4ac1-a085-88ff46ea8b0a' # Article
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -64,11 +64,11 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:7029d17e-da66-4fde-818a-21286d399f29'
+      singleUploadLocationSource: 'volume:9da668f2-c1d0-4ac1-a085-88ff46ea8b0a' # Article
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:9da668f2-c1d0-4ac1-a085-88ff46ea8b0a'
+        - 'volume:9da668f2-c1d0-4ac1-a085-88ff46ea8b0a' # Article
       targetSiteId: null
       useSingleFolder: false
       validateRelatedElements: false
@@ -76,7 +76,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  6f1fb9ef-5294-479e-87ac-396a95a1f470:
+  6f1fb9ef-5294-479e-87ac-396a95a1f470: # Alt Text
     contentColumnType: string(480)
     fieldGroup: null
     handle: altText
@@ -90,12 +90,12 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  d9af5eef-972e-40fe-b136-912375d86583:
+  d9af5eef-972e-40fe-b136-912375d86583: # Width
     contentColumnType: string
     fieldGroup: null
     handle: width
@@ -141,7 +141,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  d804885f-afb4-4970-bbb7-0af5a1e30226:
+  d804885f-afb4-4970-bbb7-0af5a1e30226: # Caption
     contentColumnType: text
     fieldGroup: null
     handle: caption
