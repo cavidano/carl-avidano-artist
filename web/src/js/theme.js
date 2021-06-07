@@ -28,66 +28,53 @@ document.addEventListener("DOMContentLoaded", () => {
     //////////////////////////////////////////////
 
     const themeButtonTarget = document.getElementById('page');
-    const themeButtonList = document.querySelectorAll('[data-theme]');
+    const themeButtonToggle = document.querySelector('[data-theme]');
 
     let themeBG = localStorage.getItem('themeColor');
 
     switch (themeBG) {
-        case 'light':
-            themeButtonTarget.classList.remove('theme-white', 'theme-dark');
-            themeButtonTarget.classList.add('theme-light');
-            document.querySelector('[data-theme="light"]').classList.add("active");
-            localStorage.setItem('themeColor', 'dark');
-            break;
         case 'dark':
             themeButtonTarget.classList.remove('theme-white');
             themeButtonTarget.classList.add('theme-dark');
-            document.querySelector('[data-theme="dark"]').classList.add("active");
             localStorage.setItem('themeColor', 'dark');
+            themeButtonToggle.setAttribute("data-theme", "white");
             break;
-        default:
-            themeButtonTarget.classList.remove('theme-light', 'theme-dark');
+        case 'white':
+            themeButtonTarget.classList.remove('theme-dark');
             themeButtonTarget.classList.add('theme-white');
-            document.querySelector('[data-theme="default"]').classList.add("active");
-            localStorage.setItem('themeColor', 'default');
+            localStorage.setItem('themeColor', 'white');
+            themeButtonToggle.setAttribute("data-theme", "dark");
+            break;
     }
 
-    for (const themeButton of themeButtonList) {
+    themeButtonToggle.addEventListener('click', (event) => {
 
-        themeButton.addEventListener('click', (event) => {
+        event.preventDefault();
 
-            event.preventDefault();
+        let setThemeColor = themeButtonToggle.getAttribute("data-theme");
 
-            let setThemeColor = themeButton.getAttribute("data-theme");
+        switch (setThemeColor) {
+            case 'white':
+                event.target.setAttribute("data-theme", "dark");
+                themeButtonTarget.classList.remove("theme-dark");
+                themeButtonTarget.classList.add("theme-white");
+                localStorage.setItem('themeColor', 'light');
+                break;
+            case 'dark':
+                event.target.setAttribute("data-theme", "white");
+                themeButtonTarget.classList.remove("theme-white");
+                themeButtonTarget.classList.add("theme-dark");
+                localStorage.setItem('themeColor', 'dark');
+                break;
+        }
 
-            switch (setThemeColor) {
-                case 'default':
-                    themeButtonTarget.classList.remove("theme-light", "theme-dark");
-                    localStorage.setItem('themeColor', 'default');
-                    break;
+        // for (const otherThemeButtons of themeButtonList) {
+        //     otherThemeButtons.classList.remove("active");
+        // }
 
-                case 'light':
-                    themeButtonTarget.classList.remove("theme-dark");
-                    themeButtonTarget.classList.add("theme-light");
-                    localStorage.setItem('themeColor', 'light');
-                    break;
+        // event.target.classList.add("active");
 
-                case 'dark':
-                    themeButtonTarget.classList.remove("theme-light");
-                    themeButtonTarget.classList.add("theme-dark");
-                    localStorage.setItem('themeColor', 'dark');
-                    break;
-            }
-
-            for (const otherThemeButtons of themeButtonList) {
-                otherThemeButtons.classList.remove("active");
-            }
-
-            event.target.classList.add("active");
-
-        });
-
-    }
+    });
 
     //////////////////////////////////////////////
     // A. Fadeout on Scroll
