@@ -45,7 +45,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 512bfad3-cd9e-4d5a-a6e1-1ae525f469c7
+            fieldUid: 512bfad3-cd9e-4d5a-a6e1-1ae525f469c7 # Image
             instructions: null
             label: null
             required: false

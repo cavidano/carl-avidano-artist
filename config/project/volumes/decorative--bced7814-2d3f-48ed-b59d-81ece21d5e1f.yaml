@@ -1,5 +1,5 @@
 fieldLayouts:
-  8f9f0707-fe8f-489c-84ca-ee8187a7e7c4:
+  66dcba9d-60a1-4b29-bdf7-36f2da9d1c22:
     tabs:
       -
         elements:
@@ -28,13 +28,13 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: Article
+handle: decorative
 hasUrls: true
-name: Article
+name: Decorative
 settings:
-  path: '@webroot/images/uploads/article'
-sortOrder: 3
+  path: '@webroot/images/uploads/decorative/'
+sortOrder: 0
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local
-url: '@web/images/uploads/article'
+url: '@web/images/uploads/decorative/'

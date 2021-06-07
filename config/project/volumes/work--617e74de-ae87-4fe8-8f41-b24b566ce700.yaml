@@ -33,7 +33,7 @@ hasUrls: true
 name: Work
 settings:
   path: '@webroot/images/uploads/work'
-sortOrder: 0
+sortOrder: 2
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local
