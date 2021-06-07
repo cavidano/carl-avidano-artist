@@ -7,7 +7,17 @@
 		<div class="backdrop backdrop--fixed full-height" id="article-introduction">
 
 			<div class="backdrop__image">
-				<img src="/dist/images/backdrop-example-03.jpg" alt="Placeholder">
+
+				{% for asset in entry.image.all() %}
+
+					{% if asset.url %}
+						<img src="{{ asset.url }}" alt="{{ asset.title }}">
+					{% else %}
+						<img src="https://via.placeholder.com/1000x750/" alt="Placeholder">
+					{% endif %}
+
+				{% endfor %}
+
 			</div>
 
 			<div class="backdrop__cover">
@@ -22,7 +32,7 @@
 						{{ entry.paragraph }}
 					</div>
 
-					<a href="#bio" class="button theme-dark margin-y-4">
+					<a href="#bio" class="button button--outline margin-y-4">
 						{{ entry.linkText }}
 					</a>
 
@@ -83,3 +93,37 @@
 	</article>
 
 {% endblock %}
+
+{% js %}
+
+//////////////////////////////////////////////
+	// Fadeout on Scroll
+	//////////////////////////////////////////////
+
+	document.addEventListener("DOMContentLoaded", () => {
+
+		const fadeTarget = document.querySelector('#article-introduction');
+
+		if (fadeTarget) {
+
+			const fadeTargetHeight = fadeTarget.scrollHeight;
+
+			let scrollPosition = 0;
+
+			const fadeOnScroll = (scroll_pos) => {
+				if (scroll_pos < fadeTargetHeight) {
+					let fadeTargetOpacity = (fadeTargetHeight - scrollPosition) / fadeTargetHeight;
+					fadeTarget.style.opacity = fadeTargetOpacity;
+					// console.log(`Window scroll position == ${scroll_pos}, ${fadeTargetOpacity}`);
+				}
+			}
+
+			window.addEventListener('scroll', () => {
+				scrollPosition = window.scrollY;
+				fadeOnScroll(scrollPosition);
+			});
+		}
+
+	});
+
+{% endjs %}

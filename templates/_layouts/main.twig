@@ -6,7 +6,7 @@
 
 	<head>
 
-		<!-- IE Compatibility Mode -->
+		{# IE Compatibility Mode #}
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<meta charset="utf-8">
@@ -15,15 +15,15 @@
 
 		<title>Home | Carl Avidano • Artist</title>
 
-		<!-- Icons -->
+		{# Icons #}
 		<link
 		rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css">
 
-		<!-- Adobe Typekit -->
+		{# Adobe Typekit #}
 		<link
 		rel="stylesheet" href="https://use.typekit.net/tfu8jxw.css">
 
-		<!-- Theme CSS -->
+		{# Theme CSS #}
 		<link rel="stylesheet" href="/dist/css/carl_avidano.css">
 
 	</head>
@@ -33,7 +33,7 @@
 		<header
 			id="global-header">
 
-			<!-- For keyboard users -->
+			{# For keyboard users #}
 			<a class="focusable-only" href="#skip-header-target">Skip Header</a>
 
 			<div class="primary-nav--inline--lg">
@@ -108,7 +108,6 @@
 		<main id="primary-content"> {% block main %}{% endblock %}
 
 			</main>
-			<!-- #primary-content -->
 
 			<footer id="global-footer" class="padding-y-3 font-size-sm">
 
@@ -146,11 +145,8 @@
 
 			</footer>
 
-			<!-- NYC Core Javascript -->
+			{# NYC Core Javascript #}
 			{% js "/dist/js/carl_avidano.js" %}
-
-			<!-- Theme JS -->
-			{% js "/src/js/theme.js" %}
 
 		</body>
 
