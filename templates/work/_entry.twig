@@ -149,3 +149,10 @@ const coolURL = document.getElementById("work-image").src;
 	});
 
 {% endjs %}
+
+{# Load React (Note: when deploying, replace "development.js" with "production.min.js") #}
+{% js "https://unpkg.com/react@17/umd/react.production.min.js" with { crossorigin: true } %}
+{% js "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" with { crossorigin: true } %}
+
+{# Load React components #}
+{% js "/dist/js/share_this.js" %}
