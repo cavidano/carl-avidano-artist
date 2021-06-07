@@ -127,11 +127,11 @@
 
 {% js %}
 
-const coolURL = document.getElementById("work-image").src;
+	const imgURL = document.getElementById("work-image").src;
 
-	console.log(coolURL);
+	console.log(imgURL);
 
-	var viewer = OpenSeadragon({
+	const viewer = OpenSeadragon({
 
 		id: "openseadragon",
 		toolbar:       "toolbarDiv",
@@ -144,7 +144,7 @@ const coolURL = document.getElementById("work-image").src;
 
 		tileSources:   {
 			type: 'image',
-			url:  coolURL
+			url:  imgURL
 		}
 	});
 
