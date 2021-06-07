@@ -2,26 +2,26 @@
 
 {% block main %}
 
-<div class="border-top border-bottom overflow-hidden">
+	<div class="border-top border-bottom overflow-hidden">
 
-	{% set category = 'All' %}
+		{% set category = 'All' %}
 
-	{{ include('_includes/work-nav.html') }}
+		{{ include('_includes/work-nav.html') }}
 
-	<div class="container narrow wide--lg margin-y-4">
-	
-		<div class="grid grid--gap-2 grid--cells-6--sm grid--cells-3--lg justify-content-center">
+		<div class="container narrow wide--lg margin-y-4">
 
-			{% for entry in craft.entries.section('work').all() %}
-				
-			{{ include('_includes/work-thumbnail.html') }}
+			<div class="grid grid--gap-2 grid--cells-6--sm grid--cells-3--lg justify-content-center">
 
-			{% endfor %}
+				{% for entry in craft.entries.section('work').all() %}
+
+					{{ include('_includes/work-thumbnail.html') }}
+
+				{% endfor %}
+
+			</div>
 
 		</div>
 
 	</div>
-
-</div>
 
 {% endblock %}
