@@ -2,16 +2,24 @@
 
     <ul class="nav nav--divider nav--horizontal--sm border font-size-sm">
         <li>
-            <a href="/work" {% if category == 'All' %} aria-current="page" {% endif %}>All</a>
+            <a {% if category == 'All' %} class="subtle-fill" aria-current="page" {% endif %} href="/work">
+				All
+			</a>
         </li>
 		<li>
-			<a href="/work/drawing" {% if category == 'Drawing' %} aria-current="page" {% endif %}>Drawing</a>
+			<a {% if category == 'Drawing' %} class="subtle-fill" aria-current="page" {% endif %} href="/work/drawing">
+				Drawing
+			</a>
 		</li>
 		<li>
-			<a href="/work/painting" {% if category == 'Painting' %} aria-current="page" {% endif %}>Painting</a>
+			<a {% if category == 'Painting' %} class="subtle-fill" aria-current="page" {% endif %} href="/work/painting">
+				Painting
+			</a>
 		</li>
 		<li>
-			<a href="/work/studies" {% if category == 'Studies' %} aria-current="page" {% endif %}>Studies</a>
+			<a {% if category == 'Studies' %} class="subtle-fill" aria-current="page" {% endif %} href="/work/studies">
+				Studies
+			</a>
 		</li>
 	</ul>
 

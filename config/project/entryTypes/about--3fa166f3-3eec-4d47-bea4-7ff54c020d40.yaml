@@ -45,7 +45,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 512bfad3-cd9e-4d5a-a6e1-1ae525f469c7 # Image
+            fieldUid: d70a193e-d6ac-4fcb-a29f-002c20928b46 # Feature Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f5291a6a-7663-4a22-a0d8-ad5433241fe8
             instructions: null
             label: null
             required: false

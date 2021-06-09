@@ -8,12 +8,12 @@
 
 			<div class="backdrop__image">
 
-				{% set image = entry.image.one() %}
+				{% set image = entry.featureImage.one() %}
 
 				{% if image %}
 					<img src="{{ image.url }}" alt="{{ image.title }}">
 				{% else %}
-					<img src="https://via.placeholder.com/1000x750/" alt="Placeholder">
+					<img src="https://via.placeholder.com/1000x750" alt="Placeholder">
 				{% endif %}
 
 			</div>

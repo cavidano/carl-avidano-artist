@@ -1,27 +1,28 @@
 contentColumnType: string
 fieldGroup: 65b33c82-2b25-4363-8a5d-65f673795c6d
-handle: image
+handle: featureImage
 instructions: ''
-name: Image
+name: 'Feature Image'
 searchable: false
 settings:
   allowSelfRelations: false
   allowUploads: false
   allowedKinds: null
-  defaultUploadLocationSource: 'volume:9da668f2-c1d0-4ac1-a085-88ff46ea8b0a' # Article
+  defaultUploadLocationSource: 'volume:bced7814-2d3f-48ed-b59d-81ece21d5e1f' # Decorative
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
   previewMode: full
   restrictFiles: ''
-  selectionLabel: 'Add an Image'
+  selectionLabel: ''
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:9da668f2-c1d0-4ac1-a085-88ff46ea8b0a' # Article
+  singleUploadLocationSource: 'volume:bced7814-2d3f-48ed-b59d-81ece21d5e1f' # Decorative
   singleUploadLocationSubpath: ''
   source: null
-  sources: '*'
+  sources:
+    - 'volume:bced7814-2d3f-48ed-b59d-81ece21d5e1f' # Decorative
   targetSiteId: null
   useSingleFolder: false
   validateRelatedElements: false
