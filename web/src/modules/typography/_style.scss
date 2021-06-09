@@ -272,9 +272,11 @@ ol {
 
 figure {
     figcaption {
-        font-size: var(--font-size-sm);
-        opacity: 0.85;
+        font-size: var(--font-size-md);
+
         margin-top: var(--spacer-2);
+        
+        opacity: 0.75;
     }
 }
 
