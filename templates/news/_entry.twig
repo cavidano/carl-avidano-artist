@@ -1,0 +1,75 @@
+{% extends "_layouts/main" %}
+
+{% block main %}
+
+<article class="overflow-hidden">
+
+<div class="full-height subtle-fill">
+
+		<div class="grid grid--cells-6--lg align-items-center--lg row-reverse--lg height-100--lg">
+
+			<div class="grid__cell height-100--lg">
+
+                <div class="backdrop backdrop--fixed height-100">
+
+                        <div class="backdrop__image">
+                            {% set image = entry.newsFeatureImage.one() %}
+
+                            {% if image %}
+                                <img class="opacity-90" src="{{ image.url }}" alt="{{ image.title }}">
+                            {% else %}
+                                <img src="https://via.placeholder.com/1000x750" alt="Placeholder">
+                            {% endif %}
+                        </div>
+
+                        <div class="backdrop__cover display-none--lg">
+
+                            <div class="container wide">
+
+                                <h1 class="banner-headline">
+                                    Lorem ipsum dolor
+                                </h1>
+
+                            </div>
+                            <!-- .container -->
+
+                        </div>
+                        <!-- .backdrop__cover -->
+
+                        <div class="backdrop__credit">
+                            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+                        </div>
+
+                    </div>
+                    <!-- .backdrop -->
+
+
+			
+			</div>
+
+			<div class="grid__cell">
+				<div class="container narrow padding-y-4">
+
+                    <h1 class="banner-headline">
+                        {{ entry.title }}
+                    </h1>
+                    
+					<div class="margin-y-2" id="share_container"></div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+    <section class="margin-y-5">
+
+        {{ include('/_includes/article-matrix.html') }}
+
+    </section>
+
+</article>
+
+{% endblock %}

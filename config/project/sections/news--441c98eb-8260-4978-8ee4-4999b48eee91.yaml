@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: news
+name: News
+propagationMethod: all
+siteSettings:
+  57c787ad-978a-4e6c-b80b-40ea855b4233: # Carl Avidano • Artist
+    enabledByDefault: true
+    hasUrls: true
+    template: news/_entry
+    uriFormat: 'news/{slug}'
+type: channel

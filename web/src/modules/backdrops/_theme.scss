@@ -10,7 +10,7 @@ In this file:
     --backdrop-image-opacity: 0.7;
 }
 
-.backdrop__image img {
+.backdrop__image img:not([class*="opacity-"]) {
     opacity: var(--backdrop-image-opacity);
 }
 

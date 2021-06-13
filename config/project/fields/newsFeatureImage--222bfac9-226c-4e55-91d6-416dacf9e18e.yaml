@@ -1,0 +1,32 @@
+contentColumnType: string
+fieldGroup: dc3c1def-7c27-4531-af0e-8db1a6b54c55 # News
+handle: newsFeatureImage
+instructions: ''
+name: 'News Feature Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:4dc7b104-3260-48d3-9bba-f7562258ddef' # News
+  defaultUploadLocationSubpath: feature
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: ''
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:bced7814-2d3f-48ed-b59d-81ece21d5e1f' # Decorative
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:4dc7b104-3260-48d3-9bba-f7562258ddef' # News
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

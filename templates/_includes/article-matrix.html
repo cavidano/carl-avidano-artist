@@ -1,0 +1,37 @@
+{% set blocks = entry.articleMatrix.all() %}
+
+{% for block in blocks %}
+
+    {% switch block.type %}
+
+        {% case "textBlock" %}
+            <div class="container narrow margin-y-4">
+                {{ block.text }}
+            </div>
+
+        {% case "figureBlock" %}
+
+            {% set width = block.width %}
+            {% set image = block.image.one() %}
+
+
+            <figure class="container {{ width }} margin-y-4">
+                <img src="{{ image.url() }}" alt="{{ block.altText }}"/>
+                {% if block.caption %}
+                    <figcaption class="caption">
+                        <small>{{ block.caption }}</small>
+                    </figcaption>
+                {% endif %}
+            </figure>
+
+
+        {% case "divider" %}
+            <hr class="margin-y-5" id="{{ block.idAttribute }}"/>
+
+        {% default %}
+            <p>A font walks into a bar.</p>
+            <p>The bartender says, “Hey, we don’t serve your type in here!”</p>
+
+    {% endswitch %}
+
+{% endfor %}
